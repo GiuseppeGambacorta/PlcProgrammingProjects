@@ -1,0 +1,13 @@
+{attribute 'qualified_only'}
+NAMESPACE modbus
+VAR_GLOBAL
+
+    now, currentIndex, counter, counter2 : INT;
+
+    valueFromCodesys : INT;
+
+    led1, led2, led3, led4 : BOOL;
+
+    isAbove : BOOL;
+END_VAR
+END_NAMESPACE

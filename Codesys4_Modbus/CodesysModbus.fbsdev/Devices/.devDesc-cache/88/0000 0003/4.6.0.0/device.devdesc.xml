@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DeviceDescription xmlns="http://www.3s-software.com/schemas/DeviceDescription-1.0.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ts="http://www.3s-software.com/schemas/TargetSettings-0.1.xsd" xsi:schemaLocation="http://www.3s-software.com/schemas/DeviceDescription-1.0.xsd https://de.codesys.com/fileadmin/data/schemas/DeviceDescription-1.0.xsd http://www.3s-software.com/schemas/TargetSettings-0.1.xsd https://de.codesys.com/fileadmin/data/schemas/TargetSettings-0.1.xsd">
+  <Types namespace="local">
+    <StructType name="FBInstance">
+      <Component identifier="FBType" type="std:STRING">
+        <Default />
+        <VisibleName name="local:FBInstance.FBType">FBType</VisibleName>
+      </Component>
+      <Component identifier="FBDiagType" type="std:STRING">
+        <Default />
+        <VisibleName name="local:FBInstance.FBDiagType">FBDiagType</VisibleName>
+      </Component>
+      <Component identifier="InitMethodName" type="std:STRING">
+        <Default />
+        <VisibleName name="local:FBInstance.InitMethodName">InitMethodName</VisibleName>
+      </Component>
+    </StructType>
+  </Types>
+  <Strings namespace="local">
+    <Language lang="de-de">
+      <String identifier="typename">
+        Modbus TCP Client
+      </String>
+      <String identifier="typedescription">
+        Ein Geraet, dass als Modbus Client für Ethernet konfiguiert wird.
+      </String>
+      <String identifier="_3S">CODESYS</String>
+    </Language>
+  </Strings>
+  <Device>
+    <DeviceIdentification>
+      <Type>88</Type>
+      <Id>0000 0003</Id>
+      <Version>4.6.0.0</Version>
+    </DeviceIdentification>
+    <DeviceInfo>
+      <Name name="local:typename">Modbus TCP Client</Name>
+      <Description name="local:typedescription">A device that works as a Modbus Client on Ethernet.</Description>
+      <Vendor name="local:_3S">CODESYS</Vendor>
+      <OrderNumber>-</OrderNumber>
+    </DeviceInfo>
+    <Connector role="child" connectorId="1" hostpath="-1" interface="Common.Ethernet" moduleType="88" explicit="false">
+      <InterfaceName name="local:NONE">ModbusTCPClient</InterfaceName>
+      <Slot count="1" allowEmpty="false" />
+      <Appearance>
+        <ShowEditor>ModbusTCPMasterPage</ShowEditor>
+        <ShowEditor>IOMappingEditor</ShowEditor>
+        <ShowEditor>ParameterEditor</ShowEditor>
+        <ShowEditor>LoggerPage</ShowEditor>
+        <ShowEditor>StatusPage</ShowEditor>
+        <ShowEditor>DeviceInformation</ShowEditor>
+      </Appearance>
+    </Connector>
+    <Connector connectorId="2" explicit="false" hostpath="1" interface="Common.ModbusTCPMaster" moduleType="88" role="parent">
+      <InterfaceName name="local:NONE">ModbusTCPClient</InterfaceName>
+      <Var max="64">
+      </Var>
+      <HostParameterSet>
+        <Parameter ParameterId="8000" type="std:BOOL">
+          <Attributes offlineaccess="read" download="false" functional="false" />
+          <Default>true</Default>
+          <!-- oder false ? -->
+          <Name name="local:Parameter.NewChannelConfig">ExtendedChannelConfig</Name>
+          <Description name="local:Parameter.NewChannelConfig">Use the new Channel-Config format</Description>
+        </Parameter>
+        <Parameter ParameterId="8002" type="std:BOOL">
+          <Attributes channel="none" download="true" functional="false" offlineaccess="readwrite" onlineaccess="read" />
+          <Default>TRUE</Default>
+          <Name name="local:Id2147483648">OptimizationOn</Name>
+          <Description name="local:2147483648.Desc">the driver optimizes the io update</Description>
+        </Parameter>
+        <!-- Parameter is obsolet <Parameter ParameterId="9000" type="std:UDINT">
+          <Attributes offlineaccess="readwrite" download="true" functional="false"/>
+          <Default>10</Default>
+          <Name name="local:Parameter.Transmission">Socket Timeout</Name>
+          <Description name="local:Parameter.Transmission">Socket Timeout in miliseconds</Description>
+        </Parameter>-->
+        <Parameter ParameterId="9001" type="std:UDINT">
+          <Attributes offlineaccess="readwrite" download="true" functional="false" />
+          <Default>1000</Default>
+          <Name name="local:Parameter.ResponseTimeOut">ResponseTimeOut</Name>
+          <Description name="local:Parameter.ResponseTimeOut">Response time in milliseconds</Description>
+        </Parameter>
+        <Parameter ParameterId="9002" type="std:BOOL">
+          <Attributes offlineaccess="readwrite" download="true" functional="false" />
+          <Default>FALSE</Default>
+          <Name name="local:Parameter.AutoReconnect">AutoReconnect</Name>
+          <Description name="local:Parameter.ResponseTimeOut">auto-confirm error and re-establish TCP connection</Description>
+        </Parameter>
+        <Parameter ParameterId="9003" type="std:BOOL">
+          <Attributes offlineaccess="readwrite" download="true" functional="false" />
+          <Default>FALSE</Default>
+          <Name name="local:Parameter.EnableChannelStatusMappings">EnableChannelStatusMappings</Name>
+          <Description name="local:Parameter.EnableChannelStatusMappings">Additional mapping options for channel status in TCP Server I/O-Mapping</Description>
+        </Parameter>
+        <Parameter ParameterId="9010" type="local:FBInstance">
+          <Attributes download="false" offlineaccess="read" />
+          <Default>
+            <Element name="FBType">'ModbusTCPSlaveUnit'</Element>
+            <Element name="FBDiagType">'ModbusTCPSlaveUnit_Diag'</Element>
+            <Element name="InitMethodName">'Initialize'</Element>
+          </Default>
+          <Name name="local:IdHex40001">ModbusTCP Client Instance</Name>
+          <Description name="local:IdHex40001.Desc">Implicit Function Block for Modbus Clients.</Description>
+        </Parameter>
+      </HostParameterSet>
+      <DriverInfo needsBusCycle="true" needsBusCycleBeforeReadInputs="true">
+        <RequiredLib identifier="IoDrvModbusTCP" libname="IoDrvModbusTCP" placeholderlib="IoDrvModbusTCP" vendor="CODESYS" version="*">
+          <FBInstance basename="$(DeviceName)" fbname="IoDrvModbusTCP" fbnamediag="IoDrvModbusTCP_Diag">
+            <Initialize methodName="Initialize" />
+          </FBInstance>
+        </RequiredLib>
+        <Scan supported="false" />
+      </DriverInfo>
+    </Connector>
+    <ExtendedSettings>
+      <ts:TargetSettings>
+        <ts:section name="library-management">
+          <ts:section name="placeholder-libraries">
+            <ts:setting name="IoDrvModbusTCP" type="string" access="visible">
+              <ts:value>IoDrvModbusTCP, 4.6.0.0 (CODESYS)</ts:value>
+            </ts:setting>
+            <ts:setting name="IoDrvModbusBase" type="string" access="visible">
+              <ts:value>IoDrvModbusBase, 4.6.0.0 (CODESYS)</ts:value>
+            </ts:setting>
+          </ts:section>
+        </ts:section>
+      </ts:TargetSettings>
+    </ExtendedSettings>
+    <CompatibleVersions>
+      <Version>3.5.*.*</Version>
+      <Version>4.*.*.*</Version>
+    </CompatibleVersions>
+  </Device>
+</DeviceDescription>

@@ -1,0 +1,4638 @@
+{
+	"deviceTree": {
+		"deviceName": "CODESYS_Control_Win_V3_x64",
+		"identification": {
+			"type": 4096,
+			"id": "0000 0004",
+			"version": "3.5.22.30"
+		},
+		"moduleListIndex": 0,
+		"plcSettings": {
+			"applicationForIoHandling": "Application",
+			"updateIosInStop": false,
+			"stopResetBehaviour": "KeepCurrentValues",
+			"generateForceVariables": false,
+			"showIoWarningsAsErrors": false,
+			"deviceDiagnosis": false,
+			"symbolicIoAccess": false,
+			"needsBusCycle": false,
+			"needsBusCycleBeforeRead": false,
+			"cycleControlInIec": true
+		},
+		"settings": {
+			"updateAlways": true,
+			"busCycleTask": "DefaultTask",
+			"createBitChannels": false
+		},
+		"parameters": [],
+		"inputChannelEntries": [],
+		"outputChannelEntries": [],
+		"functionBlocks": [],
+		"downwardConnectors": [
+			{
+				"id": 1,
+				"moduleListIndex": 1,
+				"moduleType": 256,
+				"initialStatusFlag": 1,
+				"parameters": [],
+				"inputChannelEntries": [],
+				"outputChannelEntries": [],
+				"devices": [
+					{
+						"deviceName": "Ethernet",
+						"identification": {
+							"type": 110,
+							"id": "0000 0002",
+							"version": "4.2.0.0"
+						},
+						"settings": {
+							"updateAlways": true,
+							"busCycleTask": "DefaultTask",
+							"createBitChannels": false
+						},
+						"parameters": [],
+						"upwardConnector": {
+							"id": 1,
+							"moduleListIndex": 2,
+							"moduleType": 110,
+							"initialStatusFlag": 241,
+							"parameters": [],
+							"inputChannelEntries": [],
+							"outputChannelEntries": [],
+							"functionBlocks": [],
+							"connectorSettings": {
+								"needsBusCycle": false,
+								"needsBusCycleBeforeRead": false
+							}
+						},
+						"inputChannelEntries": [],
+						"outputChannelEntries": [],
+						"downwardConnectors": [
+							{
+								"id": 2,
+								"moduleListIndex": 3,
+								"moduleType": 111,
+								"initialStatusFlag": 241,
+								"parameters": [
+									{
+										"id": 0,
+										"baseType": "std:ARRAY[0..3] OF BYTE",
+										"parameterValue": {
+											"value": "[0, 0, 0, 0]"
+										},
+										"attributes": {
+											"channel": "None",
+											"onlineAccess": "ReadWrite",
+											"offlineAccess": "ReadWrite"
+										}
+									},
+									{
+										"id": 1,
+										"baseType": "std:ARRAY[0..3] OF BYTE",
+										"parameterValue": {
+											"value": "[0, 0, 0, 0]"
+										},
+										"attributes": {
+											"channel": "None",
+											"onlineAccess": "ReadWrite",
+											"offlineAccess": "ReadWrite"
+										}
+									},
+									{
+										"id": 2,
+										"baseType": "std:ARRAY[0..3] OF BYTE",
+										"parameterValue": {
+											"value": "[0, 0, 0, 0]"
+										},
+										"attributes": {
+											"channel": "None",
+											"onlineAccess": "ReadWrite",
+											"offlineAccess": "ReadWrite"
+										}
+									},
+									{
+										"id": 3,
+										"baseType": "TypeDefinition_TransferRateType",
+										"parameterValue": {
+											"value": "0"
+										},
+										"attributes": {
+											"channel": "None",
+											"onlineAccess": "ReadWrite",
+											"offlineAccess": "ReadWrite"
+										}
+									},
+									{
+										"id": 4,
+										"baseType": "TypeDefinition_IPConfigModeType",
+										"parameterValue": {
+											"value": "1"
+										},
+										"attributes": {
+											"channel": "None",
+											"onlineAccess": "ReadWrite",
+											"offlineAccess": "ReadWrite"
+										}
+									},
+									{
+										"id": 5,
+										"baseType": "std:STRING",
+										"parameterValue": {
+											"value": "myDevice"
+										},
+										"attributes": {
+											"channel": "None",
+											"onlineAccess": "ReadWrite",
+											"offlineAccess": "ReadWrite"
+										}
+									},
+									{
+										"id": 6,
+										"baseType": "std:BOOL",
+										"parameterValue": {
+											"value": "true"
+										},
+										"attributes": {
+											"channel": "None",
+											"onlineAccess": "ReadWrite",
+											"offlineAccess": "ReadWrite"
+										}
+									},
+									{
+										"id": 9,
+										"baseType": "std:ARRAY[0..5] OF BYTE",
+										"parameterValue": {
+											"value": "[16#0, 16#0, 16#0, 16#0, 16#0, 16#0]"
+										},
+										"attributes": {
+											"channel": "None",
+											"onlineAccess": "ReadWrite",
+											"offlineAccess": "Read"
+										}
+									},
+									{
+										"id": 10,
+										"baseType": "std:STRING",
+										"parameterValue": {
+											"value": "Ethernet"
+										},
+										"attributes": {
+											"channel": "None",
+											"onlineAccess": "ReadWrite",
+											"offlineAccess": "ReadWrite"
+										}
+									},
+									{
+										"id": 11,
+										"baseType": "TypeDefinition_ProtocolEnumType",
+										"parameterValue": {
+											"value": "0"
+										},
+										"attributes": {
+											"channel": "None",
+											"onlineAccess": "ReadWrite",
+											"offlineAccess": "ReadWrite"
+										}
+									},
+									{
+										"id": 12,
+										"baseType": "std:WSTRING",
+										"parameterValue": {
+											"value": "Ethernet"
+										},
+										"attributes": {
+											"channel": "None",
+											"onlineAccess": "ReadWrite",
+											"offlineAccess": "ReadWrite"
+										}
+									},
+									{
+										"id": 13,
+										"baseType": "std:BOOL",
+										"parameterValue": {
+											"value": "FALSE"
+										},
+										"attributes": {
+											"channel": "None",
+											"onlineAccess": "ReadWrite",
+											"offlineAccess": "ReadWrite"
+										}
+									},
+									{
+										"id": 100,
+										"baseType": "std:ARRAY[0..3] OF BYTE",
+										"parameterValue": {
+											"value": "[192, 168, 0, 1]"
+										},
+										"attributes": {
+											"channel": "None",
+											"onlineAccess": "ReadWrite",
+											"offlineAccess": "Read"
+										}
+									},
+									{
+										"id": 101,
+										"baseType": "std:ARRAY[0..3] OF BYTE",
+										"parameterValue": {
+											"value": "[255, 255, 255, 0]"
+										},
+										"attributes": {
+											"channel": "None",
+											"onlineAccess": "ReadWrite",
+											"offlineAccess": "Read"
+										}
+									},
+									{
+										"id": 102,
+										"baseType": "std:ARRAY[0..3] OF BYTE",
+										"parameterValue": {
+											"value": "[0, 0, 0, 0]"
+										},
+										"attributes": {
+											"channel": "None",
+											"onlineAccess": "ReadWrite",
+											"offlineAccess": "Read"
+										}
+									},
+									{
+										"id": 103,
+										"baseType": "TypeDefinition_TransferRateType",
+										"parameterValue": {
+											"value": "0"
+										},
+										"attributes": {
+											"channel": "None",
+											"onlineAccess": "ReadWrite",
+											"offlineAccess": "Read"
+										}
+									},
+									{
+										"id": 104,
+										"baseType": "TypeDefinition_IPConfigModeType",
+										"parameterValue": {
+											"value": "1"
+										},
+										"attributes": {
+											"channel": "None",
+											"onlineAccess": "ReadWrite",
+											"offlineAccess": "Read"
+										}
+									},
+									{
+										"id": 105,
+										"baseType": "std:STRING",
+										"parameterValue": {
+											"value": "my Device"
+										},
+										"attributes": {
+											"channel": "None",
+											"onlineAccess": "ReadWrite",
+											"offlineAccess": "Read"
+										}
+									},
+									{
+										"id": 106,
+										"baseType": "std:BOOL",
+										"parameterValue": {
+											"value": "true"
+										},
+										"attributes": {
+											"channel": "None",
+											"onlineAccess": "ReadWrite",
+											"offlineAccess": "Read"
+										}
+									},
+									{
+										"id": 107,
+										"baseType": "TypeDefinition_NetworkStatusType",
+										"parameterValue": {
+											"value": "1"
+										},
+										"attributes": {
+											"channel": "None",
+											"onlineAccess": "ReadWrite",
+											"offlineAccess": "Read"
+										}
+									},
+									{
+										"id": 108,
+										"baseType": "TypeDefinition_ModuleStatusType",
+										"parameterValue": {
+											"value": "1"
+										},
+										"attributes": {
+											"channel": "None",
+											"onlineAccess": "ReadWrite",
+											"offlineAccess": "Read"
+										}
+									},
+									{
+										"id": 109,
+										"baseType": "std:ARRAY[0..5] OF BYTE",
+										"parameterValue": {
+											"value": "[16#0, 16#0, 16#0, 16#0, 16#0, 16#0]"
+										},
+										"attributes": {
+											"channel": "None",
+											"onlineAccess": "ReadWrite",
+											"offlineAccess": "Read"
+										}
+									},
+									{
+										"id": 110,
+										"baseType": "std:STRING",
+										"parameterValue": {
+											"value": "ether 0"
+										},
+										"attributes": {
+											"channel": "None",
+											"onlineAccess": "ReadWrite",
+											"offlineAccess": "Read"
+										}
+									},
+									{
+										"id": 111,
+										"baseType": "TypeDefinition_ProtocolEnumType",
+										"parameterValue": {
+											"value": "0"
+										},
+										"attributes": {
+											"channel": "None",
+											"onlineAccess": "ReadWrite",
+											"offlineAccess": "Read"
+										}
+									},
+									{
+										"id": 200,
+										"baseType": "std:WSTRING",
+										"parameterValue": {
+											"value": ""
+										},
+										"attributes": {
+											"channel": "None",
+											"onlineAccess": "ReadWrite",
+											"offlineAccess": "ReadWrite"
+										}
+									},
+									{
+										"id": 201,
+										"baseType": "std:ARRAY[0..3] OF BYTE",
+										"parameterValue": {
+											"value": "[192, 168, 0, 2]"
+										},
+										"attributes": {
+											"channel": "None",
+											"onlineAccess": "ReadWrite",
+											"offlineAccess": "ReadWrite"
+										}
+									},
+									{
+										"id": 202,
+										"baseType": "std:ARRAY[0..3] OF BYTE",
+										"parameterValue": {
+											"value": "[255, 255, 255, 0]"
+										},
+										"attributes": {
+											"channel": "None",
+											"onlineAccess": "ReadWrite",
+											"offlineAccess": "ReadWrite"
+										}
+									},
+									{
+										"id": 203,
+										"baseType": "std:ARRAY[0..3] OF BYTE",
+										"parameterValue": {
+											"value": "[0, 0, 0, 0]"
+										},
+										"attributes": {
+											"channel": "None",
+											"onlineAccess": "ReadWrite",
+											"offlineAccess": "ReadWrite"
+										}
+									},
+									{
+										"id": 2006,
+										"baseType": "TypeDefinition_EthDiag",
+										"attributes": {
+											"channel": "None",
+											"onlineAccess": "Read",
+											"offlineAccess": "Read"
+										}
+									},
+									{
+										"id": 2007,
+										"baseType": "std:BOOL",
+										"parameterValue": {
+											"value": "FALSE"
+										},
+										"attributes": {
+											"channel": "None",
+											"onlineAccess": "None",
+											"offlineAccess": "None"
+										}
+									},
+									{
+										"id": 10000000,
+										"baseType": "std:BOOL",
+										"parameterValue": {
+											"value": "false"
+										},
+										"attributes": {
+											"channel": "None",
+											"onlineAccess": "ReadWrite",
+											"offlineAccess": "None"
+										}
+									},
+									{
+										"id": 10000001,
+										"baseType": "std:BOOL",
+										"parameterValue": {
+											"value": "true"
+										},
+										"attributes": {
+											"channel": "None",
+											"onlineAccess": "ReadWrite",
+											"offlineAccess": "None"
+										}
+									},
+									{
+										"id": 10000004,
+										"baseType": "std:BOOL",
+										"parameterValue": {
+											"value": "true"
+										},
+										"attributes": {
+											"channel": "None",
+											"onlineAccess": "ReadWrite",
+											"offlineAccess": "None"
+										}
+									},
+									{
+										"id": 20000000,
+										"baseType": "std:__XWORD",
+										"parameterValue": {
+											"value": "0"
+										},
+										"attributes": {
+											"channel": "None",
+											"onlineAccess": "ReadWrite",
+											"offlineAccess": "None"
+										}
+									}
+								],
+								"inputChannelEntries": [],
+								"outputChannelEntries": [],
+								"devices": [
+									{
+										"deviceName": "Modbus_TCP_Client",
+										"identification": {
+											"type": 88,
+											"id": "0000 0003",
+											"version": "4.6.0.0"
+										},
+										"settings": {
+											"updateAlways": true,
+											"busCycleTask": "DefaultTask",
+											"createBitChannels": false
+										},
+										"parameters": [],
+										"upwardConnector": {
+											"id": 1,
+											"moduleListIndex": 4,
+											"moduleType": 88,
+											"initialStatusFlag": 1,
+											"parameters": [],
+											"inputChannelEntries": [],
+											"outputChannelEntries": [],
+											"functionBlocks": [],
+											"connectorSettings": {
+												"needsBusCycle": false,
+												"needsBusCycleBeforeRead": false
+											}
+										},
+										"inputChannelEntries": [],
+										"outputChannelEntries": [],
+										"downwardConnectors": [
+											{
+												"id": 2,
+												"moduleListIndex": 5,
+												"moduleType": 88,
+												"initialStatusFlag": 1,
+												"parameters": [
+													{
+														"id": 8002,
+														"baseType": "std:BOOL",
+														"parameterValue": {
+															"value": "TRUE"
+														},
+														"attributes": {
+															"channel": "None",
+															"onlineAccess": "Read",
+															"offlineAccess": "ReadWrite"
+														}
+													},
+													{
+														"id": 9001,
+														"baseType": "std:UDINT",
+														"parameterValue": {
+															"value": "1000"
+														},
+														"attributes": {
+															"channel": "None",
+															"onlineAccess": "ReadWrite",
+															"offlineAccess": "ReadWrite"
+														}
+													},
+													{
+														"id": 9002,
+														"baseType": "std:BOOL",
+														"parameterValue": {
+															"value": "TRUE"
+														},
+														"attributes": {
+															"channel": "None",
+															"onlineAccess": "ReadWrite",
+															"offlineAccess": "ReadWrite"
+														}
+													},
+													{
+														"id": 9003,
+														"baseType": "std:BOOL",
+														"parameterValue": {
+															"value": "FALSE"
+														},
+														"attributes": {
+															"channel": "None",
+															"onlineAccess": "ReadWrite",
+															"offlineAccess": "ReadWrite"
+														}
+													}
+												],
+												"inputChannelEntries": [],
+												"outputChannelEntries": [],
+												"devices": [
+													{
+														"deviceName": "Modbus_TCP_Server",
+														"identification": {
+															"type": 89,
+															"id": "0000 0005",
+															"version": "4.6.0.0"
+														},
+														"settings": {
+															"updateAlways": true,
+															"busCycleTask": "DefaultTask",
+															"createBitChannels": true
+														},
+														"parameters": [],
+														"upwardConnector": {
+															"id": 1,
+															"moduleListIndex": 6,
+															"moduleType": 89,
+															"initialStatusFlag": 1,
+															"parameters": [
+																{
+																	"id": 9100,
+																	"baseType": "std:USINT",
+																	"parameterValue": {
+																		"value": "16#FF"
+																	},
+																	"attributes": {
+																		"channel": "None",
+																		"onlineAccess": "ReadWrite",
+																		"offlineAccess": "ReadWrite"
+																	}
+																},
+																{
+																	"id": 9101,
+																	"baseType": "std:DWORD",
+																	"parameterValue": {
+																		"value": "1000"
+																	},
+																	"attributes": {
+																		"channel": "None",
+																		"onlineAccess": "ReadWrite",
+																		"offlineAccess": "ReadWrite"
+																	}
+																},
+																{
+																	"id": 9102,
+																	"baseType": "std:ARRAY[0..3] OF BYTE",
+																	"parameterValue": {
+																		"value": "[192, 168, 1, 155]"
+																	},
+																	"attributes": {
+																		"channel": "None",
+																		"onlineAccess": "ReadWrite",
+																		"offlineAccess": "ReadWrite"
+																	}
+																},
+																{
+																	"id": 9103,
+																	"baseType": "std:UINT",
+																	"parameterValue": {
+																		"value": "502"
+																	},
+																	"attributes": {
+																		"channel": "None",
+																		"onlineAccess": "ReadWrite",
+																		"offlineAccess": "ReadWrite"
+																	}
+																},
+																{
+																	"id": 9200,
+																	"baseType": "TypeDefinition_ServerDiagT",
+																	"attributes": {
+																		"channel": "None",
+																		"onlineAccess": "Read",
+																		"offlineAccess": "Read"
+																	}
+																},
+																{
+																	"id": 9201,
+																	"baseType": "std:BOOL",
+																	"parameterValue": {
+																		"value": "FALSE"
+																	},
+																	"attributes": {
+																		"channel": "None",
+																		"onlineAccess": "None",
+																		"offlineAccess": "None"
+																	}
+																},
+																{
+																	"id": 17825792,
+																	"baseType": "TypeDefinition_CHANNEL_PACKED",
+																	"parameterValue": {
+																		"components": [
+																			{
+																				"identifier": "FunctionCode",
+																				"value": "4"
+																			},
+																			{
+																				"identifier": "ReadOffset",
+																				"value": "0"
+																			},
+																			{
+																				"identifier": "ReadLength",
+																				"value": "10"
+																			},
+																			{
+																				"identifier": "WriteOffset",
+																				"value": "0"
+																			},
+																			{
+																				"identifier": "WriteLength",
+																				"value": "0"
+																			},
+																			{
+																				"identifier": "Trigger",
+																				"value": "5"
+																			},
+																			{
+																				"identifier": "CycleTime",
+																				"value": "100"
+																			},
+																			{
+																				"identifier": "ErrorHandling",
+																				"value": "TRUE"
+																			}
+																		]
+																	},
+																	"attributes": {
+																		"channel": "None",
+																		"onlineAccess": "ReadWrite",
+																		"offlineAccess": "ReadWrite"
+																	}
+																},
+																{
+																	"id": 21168128,
+																	"baseType": "std:ARRAY[0..9] OF WORD",
+																	"attributes": {
+																		"channel": "Input",
+																		"onlineAccess": "ReadWrite",
+																		"offlineAccess": "ReadWrite"
+																	},
+																	"mappings": {
+																		"mapping": "GeneratedVariableForDefaultMapping0",
+																		"tasks": [
+																			"DefaultTask"
+																		],
+																		"mappingTypeCategory": "Array",
+																		"submappings": [
+																			{
+																				"componentIdentifier": "0",
+																				"mapping": "modbus.now",
+																				"tasks": [
+																					"DefaultTask"
+																				],
+																				"mappingTypeCategory": "Bitfield",
+																				"submappings": [
+																					{
+																						"componentIdentifier": "0",
+																						"mapping": "GeneratedVariableForDefaultMapping1",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "1",
+																						"mapping": "GeneratedVariableForDefaultMapping2",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "2",
+																						"mapping": "GeneratedVariableForDefaultMapping3",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "3",
+																						"mapping": "GeneratedVariableForDefaultMapping4",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "4",
+																						"mapping": "GeneratedVariableForDefaultMapping5",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "5",
+																						"mapping": "GeneratedVariableForDefaultMapping6",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "6",
+																						"mapping": "GeneratedVariableForDefaultMapping7",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "7",
+																						"mapping": "GeneratedVariableForDefaultMapping8",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "8",
+																						"mapping": "GeneratedVariableForDefaultMapping9",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "9",
+																						"mapping": "GeneratedVariableForDefaultMapping10",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "10",
+																						"mapping": "GeneratedVariableForDefaultMapping11",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "11",
+																						"mapping": "GeneratedVariableForDefaultMapping12",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "12",
+																						"mapping": "GeneratedVariableForDefaultMapping13",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "13",
+																						"mapping": "GeneratedVariableForDefaultMapping14",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "14",
+																						"mapping": "GeneratedVariableForDefaultMapping15",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "15",
+																						"mapping": "GeneratedVariableForDefaultMapping16",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					}
+																				]
+																			},
+																			{
+																				"componentIdentifier": "1",
+																				"mapping": "modbus.currentIndex",
+																				"tasks": [
+																					"DefaultTask"
+																				],
+																				"mappingTypeCategory": "Bitfield",
+																				"submappings": [
+																					{
+																						"componentIdentifier": "0",
+																						"mapping": "GeneratedVariableForDefaultMapping17",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "1",
+																						"mapping": "GeneratedVariableForDefaultMapping18",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "2",
+																						"mapping": "GeneratedVariableForDefaultMapping19",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "3",
+																						"mapping": "GeneratedVariableForDefaultMapping20",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "4",
+																						"mapping": "GeneratedVariableForDefaultMapping21",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "5",
+																						"mapping": "GeneratedVariableForDefaultMapping22",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "6",
+																						"mapping": "GeneratedVariableForDefaultMapping23",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "7",
+																						"mapping": "GeneratedVariableForDefaultMapping24",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "8",
+																						"mapping": "GeneratedVariableForDefaultMapping25",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "9",
+																						"mapping": "GeneratedVariableForDefaultMapping26",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "10",
+																						"mapping": "GeneratedVariableForDefaultMapping27",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "11",
+																						"mapping": "GeneratedVariableForDefaultMapping28",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "12",
+																						"mapping": "GeneratedVariableForDefaultMapping29",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "13",
+																						"mapping": "GeneratedVariableForDefaultMapping30",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "14",
+																						"mapping": "GeneratedVariableForDefaultMapping31",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "15",
+																						"mapping": "GeneratedVariableForDefaultMapping32",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					}
+																				]
+																			},
+																			{
+																				"componentIdentifier": "2",
+																				"mapping": "modbus.counter",
+																				"tasks": [
+																					"DefaultTask"
+																				],
+																				"mappingTypeCategory": "Bitfield",
+																				"submappings": [
+																					{
+																						"componentIdentifier": "0",
+																						"mapping": "GeneratedVariableForDefaultMapping33",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "1",
+																						"mapping": "GeneratedVariableForDefaultMapping34",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "2",
+																						"mapping": "GeneratedVariableForDefaultMapping35",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "3",
+																						"mapping": "GeneratedVariableForDefaultMapping36",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "4",
+																						"mapping": "GeneratedVariableForDefaultMapping37",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "5",
+																						"mapping": "GeneratedVariableForDefaultMapping38",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "6",
+																						"mapping": "GeneratedVariableForDefaultMapping39",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "7",
+																						"mapping": "GeneratedVariableForDefaultMapping40",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "8",
+																						"mapping": "GeneratedVariableForDefaultMapping41",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "9",
+																						"mapping": "GeneratedVariableForDefaultMapping42",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "10",
+																						"mapping": "GeneratedVariableForDefaultMapping43",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "11",
+																						"mapping": "GeneratedVariableForDefaultMapping44",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "12",
+																						"mapping": "GeneratedVariableForDefaultMapping45",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "13",
+																						"mapping": "GeneratedVariableForDefaultMapping46",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "14",
+																						"mapping": "GeneratedVariableForDefaultMapping47",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "15",
+																						"mapping": "GeneratedVariableForDefaultMapping48",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					}
+																				]
+																			},
+																			{
+																				"componentIdentifier": "3",
+																				"mapping": "modbus.counter2",
+																				"tasks": [
+																					"DefaultTask"
+																				],
+																				"mappingTypeCategory": "Bitfield",
+																				"submappings": [
+																					{
+																						"componentIdentifier": "0",
+																						"mapping": "GeneratedVariableForDefaultMapping49",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "1",
+																						"mapping": "GeneratedVariableForDefaultMapping50",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "2",
+																						"mapping": "GeneratedVariableForDefaultMapping51",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "3",
+																						"mapping": "GeneratedVariableForDefaultMapping52",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "4",
+																						"mapping": "GeneratedVariableForDefaultMapping53",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "5",
+																						"mapping": "GeneratedVariableForDefaultMapping54",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "6",
+																						"mapping": "GeneratedVariableForDefaultMapping55",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "7",
+																						"mapping": "GeneratedVariableForDefaultMapping56",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "8",
+																						"mapping": "GeneratedVariableForDefaultMapping57",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "9",
+																						"mapping": "GeneratedVariableForDefaultMapping58",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "10",
+																						"mapping": "GeneratedVariableForDefaultMapping59",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "11",
+																						"mapping": "GeneratedVariableForDefaultMapping60",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "12",
+																						"mapping": "GeneratedVariableForDefaultMapping61",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "13",
+																						"mapping": "GeneratedVariableForDefaultMapping62",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "14",
+																						"mapping": "GeneratedVariableForDefaultMapping63",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "15",
+																						"mapping": "GeneratedVariableForDefaultMapping64",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					}
+																				]
+																			},
+																			{
+																				"componentIdentifier": "4",
+																				"mapping": "GeneratedVariableForDefaultMapping65",
+																				"tasks": [
+																					"DefaultTask"
+																				],
+																				"mappingTypeCategory": "Bitfield",
+																				"submappings": [
+																					{
+																						"componentIdentifier": "0",
+																						"mapping": "GeneratedVariableForDefaultMapping66",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "1",
+																						"mapping": "GeneratedVariableForDefaultMapping67",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "2",
+																						"mapping": "GeneratedVariableForDefaultMapping68",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "3",
+																						"mapping": "GeneratedVariableForDefaultMapping69",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "4",
+																						"mapping": "GeneratedVariableForDefaultMapping70",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "5",
+																						"mapping": "GeneratedVariableForDefaultMapping71",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "6",
+																						"mapping": "GeneratedVariableForDefaultMapping72",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "7",
+																						"mapping": "GeneratedVariableForDefaultMapping73",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "8",
+																						"mapping": "GeneratedVariableForDefaultMapping74",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "9",
+																						"mapping": "GeneratedVariableForDefaultMapping75",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "10",
+																						"mapping": "GeneratedVariableForDefaultMapping76",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "11",
+																						"mapping": "GeneratedVariableForDefaultMapping77",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "12",
+																						"mapping": "GeneratedVariableForDefaultMapping78",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "13",
+																						"mapping": "GeneratedVariableForDefaultMapping79",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "14",
+																						"mapping": "GeneratedVariableForDefaultMapping80",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "15",
+																						"mapping": "GeneratedVariableForDefaultMapping81",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					}
+																				]
+																			},
+																			{
+																				"componentIdentifier": "5",
+																				"mapping": "GeneratedVariableForDefaultMapping82",
+																				"tasks": [
+																					"DefaultTask"
+																				],
+																				"mappingTypeCategory": "Bitfield",
+																				"submappings": [
+																					{
+																						"componentIdentifier": "0",
+																						"mapping": "GeneratedVariableForDefaultMapping83",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "1",
+																						"mapping": "GeneratedVariableForDefaultMapping84",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "2",
+																						"mapping": "GeneratedVariableForDefaultMapping85",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "3",
+																						"mapping": "GeneratedVariableForDefaultMapping86",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "4",
+																						"mapping": "GeneratedVariableForDefaultMapping87",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "5",
+																						"mapping": "GeneratedVariableForDefaultMapping88",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "6",
+																						"mapping": "GeneratedVariableForDefaultMapping89",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "7",
+																						"mapping": "GeneratedVariableForDefaultMapping90",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "8",
+																						"mapping": "GeneratedVariableForDefaultMapping91",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "9",
+																						"mapping": "GeneratedVariableForDefaultMapping92",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "10",
+																						"mapping": "GeneratedVariableForDefaultMapping93",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "11",
+																						"mapping": "GeneratedVariableForDefaultMapping94",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "12",
+																						"mapping": "GeneratedVariableForDefaultMapping95",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "13",
+																						"mapping": "GeneratedVariableForDefaultMapping96",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "14",
+																						"mapping": "GeneratedVariableForDefaultMapping97",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "15",
+																						"mapping": "GeneratedVariableForDefaultMapping98",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					}
+																				]
+																			},
+																			{
+																				"componentIdentifier": "6",
+																				"mapping": "GeneratedVariableForDefaultMapping99",
+																				"tasks": [
+																					"DefaultTask"
+																				],
+																				"mappingTypeCategory": "Bitfield",
+																				"submappings": [
+																					{
+																						"componentIdentifier": "0",
+																						"mapping": "GeneratedVariableForDefaultMapping100",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "1",
+																						"mapping": "GeneratedVariableForDefaultMapping101",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "2",
+																						"mapping": "GeneratedVariableForDefaultMapping102",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "3",
+																						"mapping": "GeneratedVariableForDefaultMapping103",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "4",
+																						"mapping": "GeneratedVariableForDefaultMapping104",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "5",
+																						"mapping": "GeneratedVariableForDefaultMapping105",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "6",
+																						"mapping": "GeneratedVariableForDefaultMapping106",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "7",
+																						"mapping": "GeneratedVariableForDefaultMapping107",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "8",
+																						"mapping": "GeneratedVariableForDefaultMapping108",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "9",
+																						"mapping": "GeneratedVariableForDefaultMapping109",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "10",
+																						"mapping": "GeneratedVariableForDefaultMapping110",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "11",
+																						"mapping": "GeneratedVariableForDefaultMapping111",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "12",
+																						"mapping": "GeneratedVariableForDefaultMapping112",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "13",
+																						"mapping": "GeneratedVariableForDefaultMapping113",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "14",
+																						"mapping": "GeneratedVariableForDefaultMapping114",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "15",
+																						"mapping": "GeneratedVariableForDefaultMapping115",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					}
+																				]
+																			},
+																			{
+																				"componentIdentifier": "7",
+																				"mapping": "GeneratedVariableForDefaultMapping116",
+																				"tasks": [
+																					"DefaultTask"
+																				],
+																				"mappingTypeCategory": "Bitfield",
+																				"submappings": [
+																					{
+																						"componentIdentifier": "0",
+																						"mapping": "GeneratedVariableForDefaultMapping117",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "1",
+																						"mapping": "GeneratedVariableForDefaultMapping118",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "2",
+																						"mapping": "GeneratedVariableForDefaultMapping119",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "3",
+																						"mapping": "GeneratedVariableForDefaultMapping120",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "4",
+																						"mapping": "GeneratedVariableForDefaultMapping121",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "5",
+																						"mapping": "GeneratedVariableForDefaultMapping122",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "6",
+																						"mapping": "GeneratedVariableForDefaultMapping123",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "7",
+																						"mapping": "GeneratedVariableForDefaultMapping124",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "8",
+																						"mapping": "GeneratedVariableForDefaultMapping125",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "9",
+																						"mapping": "GeneratedVariableForDefaultMapping126",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "10",
+																						"mapping": "GeneratedVariableForDefaultMapping127",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "11",
+																						"mapping": "GeneratedVariableForDefaultMapping128",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "12",
+																						"mapping": "GeneratedVariableForDefaultMapping129",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "13",
+																						"mapping": "GeneratedVariableForDefaultMapping130",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "14",
+																						"mapping": "GeneratedVariableForDefaultMapping131",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "15",
+																						"mapping": "GeneratedVariableForDefaultMapping132",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					}
+																				]
+																			},
+																			{
+																				"componentIdentifier": "8",
+																				"mapping": "GeneratedVariableForDefaultMapping133",
+																				"tasks": [
+																					"DefaultTask"
+																				],
+																				"mappingTypeCategory": "Bitfield",
+																				"submappings": [
+																					{
+																						"componentIdentifier": "0",
+																						"mapping": "GeneratedVariableForDefaultMapping134",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "1",
+																						"mapping": "GeneratedVariableForDefaultMapping135",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "2",
+																						"mapping": "GeneratedVariableForDefaultMapping136",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "3",
+																						"mapping": "GeneratedVariableForDefaultMapping137",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "4",
+																						"mapping": "GeneratedVariableForDefaultMapping138",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "5",
+																						"mapping": "GeneratedVariableForDefaultMapping139",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "6",
+																						"mapping": "GeneratedVariableForDefaultMapping140",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "7",
+																						"mapping": "GeneratedVariableForDefaultMapping141",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "8",
+																						"mapping": "GeneratedVariableForDefaultMapping142",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "9",
+																						"mapping": "GeneratedVariableForDefaultMapping143",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "10",
+																						"mapping": "GeneratedVariableForDefaultMapping144",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "11",
+																						"mapping": "GeneratedVariableForDefaultMapping145",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "12",
+																						"mapping": "GeneratedVariableForDefaultMapping146",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "13",
+																						"mapping": "GeneratedVariableForDefaultMapping147",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "14",
+																						"mapping": "GeneratedVariableForDefaultMapping148",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "15",
+																						"mapping": "GeneratedVariableForDefaultMapping149",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					}
+																				]
+																			},
+																			{
+																				"componentIdentifier": "9",
+																				"mapping": "GeneratedVariableForDefaultMapping150",
+																				"tasks": [
+																					"DefaultTask"
+																				],
+																				"mappingTypeCategory": "Bitfield",
+																				"submappings": [
+																					{
+																						"componentIdentifier": "0",
+																						"mapping": "GeneratedVariableForDefaultMapping151",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "1",
+																						"mapping": "GeneratedVariableForDefaultMapping152",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "2",
+																						"mapping": "GeneratedVariableForDefaultMapping153",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "3",
+																						"mapping": "GeneratedVariableForDefaultMapping154",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "4",
+																						"mapping": "GeneratedVariableForDefaultMapping155",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "5",
+																						"mapping": "GeneratedVariableForDefaultMapping156",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "6",
+																						"mapping": "GeneratedVariableForDefaultMapping157",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "7",
+																						"mapping": "GeneratedVariableForDefaultMapping158",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "8",
+																						"mapping": "GeneratedVariableForDefaultMapping159",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "9",
+																						"mapping": "GeneratedVariableForDefaultMapping160",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "10",
+																						"mapping": "GeneratedVariableForDefaultMapping161",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "11",
+																						"mapping": "GeneratedVariableForDefaultMapping162",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "12",
+																						"mapping": "GeneratedVariableForDefaultMapping163",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "13",
+																						"mapping": "GeneratedVariableForDefaultMapping164",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "14",
+																						"mapping": "GeneratedVariableForDefaultMapping165",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "15",
+																						"mapping": "GeneratedVariableForDefaultMapping166",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					}
+																				]
+																			}
+																		]
+																	}
+																},
+																{
+																	"id": 34603008,
+																	"baseType": "TypeDefinition_CHANNEL_PACKED",
+																	"parameterValue": {
+																		"components": [
+																			{
+																				"identifier": "FunctionCode",
+																				"value": "2"
+																			},
+																			{
+																				"identifier": "ReadOffset",
+																				"value": "0"
+																			},
+																			{
+																				"identifier": "ReadLength",
+																				"value": "5"
+																			},
+																			{
+																				"identifier": "WriteOffset",
+																				"value": "0"
+																			},
+																			{
+																				"identifier": "WriteLength",
+																				"value": "0"
+																			},
+																			{
+																				"identifier": "Trigger",
+																				"value": "5"
+																			},
+																			{
+																				"identifier": "CycleTime",
+																				"value": "100"
+																			},
+																			{
+																				"identifier": "ErrorHandling",
+																				"value": "TRUE"
+																			}
+																		]
+																	},
+																	"attributes": {
+																		"channel": "None",
+																		"onlineAccess": "ReadWrite",
+																		"offlineAccess": "ReadWrite"
+																	}
+																},
+																{
+																	"id": 37814272,
+																	"baseType": "std:ARRAY[0..0] OF BYTE",
+																	"attributes": {
+																		"channel": "Input",
+																		"onlineAccess": "ReadWrite",
+																		"offlineAccess": "ReadWrite"
+																	},
+																	"mappings": {
+																		"mapping": "GeneratedVariableForDefaultMapping167",
+																		"tasks": [
+																			"DefaultTask"
+																		],
+																		"mappingTypeCategory": "Array",
+																		"submappings": [
+																			{
+																				"componentIdentifier": "0",
+																				"mapping": "GeneratedVariableForDefaultMapping168",
+																				"tasks": [
+																					"DefaultTask"
+																				],
+																				"mappingTypeCategory": "Bitfield",
+																				"submappings": [
+																					{
+																						"componentIdentifier": "0",
+																						"mapping": "modbus.led1",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "1",
+																						"mapping": "modbus.led2",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "2",
+																						"mapping": "modbus.led3",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "3",
+																						"mapping": "modbus.led4",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "4",
+																						"mapping": "modbus.isAbove",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "5",
+																						"mapping": "GeneratedVariableForDefaultMapping169",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "6",
+																						"mapping": "GeneratedVariableForDefaultMapping170",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "7",
+																						"mapping": "GeneratedVariableForDefaultMapping171",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					}
+																				]
+																			}
+																		]
+																	}
+																},
+																{
+																	"id": 51380224,
+																	"baseType": "TypeDefinition_CHANNEL_PACKED",
+																	"parameterValue": {
+																		"components": [
+																			{
+																				"identifier": "FunctionCode",
+																				"value": "16"
+																			},
+																			{
+																				"identifier": "ReadOffset",
+																				"value": "0"
+																			},
+																			{
+																				"identifier": "ReadLength",
+																				"value": "0"
+																			},
+																			{
+																				"identifier": "WriteOffset",
+																				"value": "0"
+																			},
+																			{
+																				"identifier": "WriteLength",
+																				"value": "10"
+																			},
+																			{
+																				"identifier": "Trigger",
+																				"value": "5"
+																			},
+																			{
+																				"identifier": "CycleTime",
+																				"value": "100"
+																			},
+																			{
+																				"identifier": "ErrorHandling",
+																				"value": "TRUE"
+																			}
+																		]
+																	},
+																	"attributes": {
+																		"channel": "None",
+																		"onlineAccess": "ReadWrite",
+																		"offlineAccess": "ReadWrite"
+																	}
+																},
+																{
+																	"id": 58982400,
+																	"baseType": "std:ARRAY[0..9] OF WORD",
+																	"attributes": {
+																		"channel": "Output",
+																		"onlineAccess": "ReadWrite",
+																		"offlineAccess": "ReadWrite"
+																	},
+																	"mappings": {
+																		"mapping": "GeneratedVariableForDefaultMapping172",
+																		"tasks": [
+																			"DefaultTask"
+																		],
+																		"mappingTypeCategory": "Array",
+																		"submappings": [
+																			{
+																				"componentIdentifier": "0",
+																				"mapping": "modbus.valueFromCodesys",
+																				"tasks": [
+																					"DefaultTask"
+																				],
+																				"mappingTypeCategory": "Bitfield",
+																				"submappings": [
+																					{
+																						"componentIdentifier": "0",
+																						"mapping": "GeneratedVariableForDefaultMapping173",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "1",
+																						"mapping": "GeneratedVariableForDefaultMapping174",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "2",
+																						"mapping": "GeneratedVariableForDefaultMapping175",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "3",
+																						"mapping": "GeneratedVariableForDefaultMapping176",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "4",
+																						"mapping": "GeneratedVariableForDefaultMapping177",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "5",
+																						"mapping": "GeneratedVariableForDefaultMapping178",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "6",
+																						"mapping": "GeneratedVariableForDefaultMapping179",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "7",
+																						"mapping": "GeneratedVariableForDefaultMapping180",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "8",
+																						"mapping": "GeneratedVariableForDefaultMapping181",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "9",
+																						"mapping": "GeneratedVariableForDefaultMapping182",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "10",
+																						"mapping": "GeneratedVariableForDefaultMapping183",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "11",
+																						"mapping": "GeneratedVariableForDefaultMapping184",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "12",
+																						"mapping": "GeneratedVariableForDefaultMapping185",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "13",
+																						"mapping": "GeneratedVariableForDefaultMapping186",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "14",
+																						"mapping": "GeneratedVariableForDefaultMapping187",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "15",
+																						"mapping": "GeneratedVariableForDefaultMapping188",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					}
+																				]
+																			},
+																			{
+																				"componentIdentifier": "1",
+																				"mapping": "GeneratedVariableForDefaultMapping189",
+																				"tasks": [
+																					"DefaultTask"
+																				],
+																				"mappingTypeCategory": "Bitfield",
+																				"submappings": [
+																					{
+																						"componentIdentifier": "0",
+																						"mapping": "GeneratedVariableForDefaultMapping190",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "1",
+																						"mapping": "GeneratedVariableForDefaultMapping191",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "2",
+																						"mapping": "GeneratedVariableForDefaultMapping192",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "3",
+																						"mapping": "GeneratedVariableForDefaultMapping193",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "4",
+																						"mapping": "GeneratedVariableForDefaultMapping194",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "5",
+																						"mapping": "GeneratedVariableForDefaultMapping195",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "6",
+																						"mapping": "GeneratedVariableForDefaultMapping196",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "7",
+																						"mapping": "GeneratedVariableForDefaultMapping197",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "8",
+																						"mapping": "GeneratedVariableForDefaultMapping198",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "9",
+																						"mapping": "GeneratedVariableForDefaultMapping199",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "10",
+																						"mapping": "GeneratedVariableForDefaultMapping200",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "11",
+																						"mapping": "GeneratedVariableForDefaultMapping201",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "12",
+																						"mapping": "GeneratedVariableForDefaultMapping202",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "13",
+																						"mapping": "GeneratedVariableForDefaultMapping203",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "14",
+																						"mapping": "GeneratedVariableForDefaultMapping204",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "15",
+																						"mapping": "GeneratedVariableForDefaultMapping205",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					}
+																				]
+																			},
+																			{
+																				"componentIdentifier": "2",
+																				"mapping": "GeneratedVariableForDefaultMapping206",
+																				"tasks": [
+																					"DefaultTask"
+																				],
+																				"mappingTypeCategory": "Bitfield",
+																				"submappings": [
+																					{
+																						"componentIdentifier": "0",
+																						"mapping": "GeneratedVariableForDefaultMapping207",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "1",
+																						"mapping": "GeneratedVariableForDefaultMapping208",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "2",
+																						"mapping": "GeneratedVariableForDefaultMapping209",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "3",
+																						"mapping": "GeneratedVariableForDefaultMapping210",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "4",
+																						"mapping": "GeneratedVariableForDefaultMapping211",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "5",
+																						"mapping": "GeneratedVariableForDefaultMapping212",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "6",
+																						"mapping": "GeneratedVariableForDefaultMapping213",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "7",
+																						"mapping": "GeneratedVariableForDefaultMapping214",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "8",
+																						"mapping": "GeneratedVariableForDefaultMapping215",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "9",
+																						"mapping": "GeneratedVariableForDefaultMapping216",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "10",
+																						"mapping": "GeneratedVariableForDefaultMapping217",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "11",
+																						"mapping": "GeneratedVariableForDefaultMapping218",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "12",
+																						"mapping": "GeneratedVariableForDefaultMapping219",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "13",
+																						"mapping": "GeneratedVariableForDefaultMapping220",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "14",
+																						"mapping": "GeneratedVariableForDefaultMapping221",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "15",
+																						"mapping": "GeneratedVariableForDefaultMapping222",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					}
+																				]
+																			},
+																			{
+																				"componentIdentifier": "3",
+																				"mapping": "GeneratedVariableForDefaultMapping223",
+																				"tasks": [
+																					"DefaultTask"
+																				],
+																				"mappingTypeCategory": "Bitfield",
+																				"submappings": [
+																					{
+																						"componentIdentifier": "0",
+																						"mapping": "GeneratedVariableForDefaultMapping224",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "1",
+																						"mapping": "GeneratedVariableForDefaultMapping225",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "2",
+																						"mapping": "GeneratedVariableForDefaultMapping226",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "3",
+																						"mapping": "GeneratedVariableForDefaultMapping227",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "4",
+																						"mapping": "GeneratedVariableForDefaultMapping228",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "5",
+																						"mapping": "GeneratedVariableForDefaultMapping229",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "6",
+																						"mapping": "GeneratedVariableForDefaultMapping230",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "7",
+																						"mapping": "GeneratedVariableForDefaultMapping231",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "8",
+																						"mapping": "GeneratedVariableForDefaultMapping232",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "9",
+																						"mapping": "GeneratedVariableForDefaultMapping233",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "10",
+																						"mapping": "GeneratedVariableForDefaultMapping234",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "11",
+																						"mapping": "GeneratedVariableForDefaultMapping235",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "12",
+																						"mapping": "GeneratedVariableForDefaultMapping236",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "13",
+																						"mapping": "GeneratedVariableForDefaultMapping237",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "14",
+																						"mapping": "GeneratedVariableForDefaultMapping238",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "15",
+																						"mapping": "GeneratedVariableForDefaultMapping239",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					}
+																				]
+																			},
+																			{
+																				"componentIdentifier": "4",
+																				"mapping": "GeneratedVariableForDefaultMapping240",
+																				"tasks": [
+																					"DefaultTask"
+																				],
+																				"mappingTypeCategory": "Bitfield",
+																				"submappings": [
+																					{
+																						"componentIdentifier": "0",
+																						"mapping": "GeneratedVariableForDefaultMapping241",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "1",
+																						"mapping": "GeneratedVariableForDefaultMapping242",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "2",
+																						"mapping": "GeneratedVariableForDefaultMapping243",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "3",
+																						"mapping": "GeneratedVariableForDefaultMapping244",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "4",
+																						"mapping": "GeneratedVariableForDefaultMapping245",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "5",
+																						"mapping": "GeneratedVariableForDefaultMapping246",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "6",
+																						"mapping": "GeneratedVariableForDefaultMapping247",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "7",
+																						"mapping": "GeneratedVariableForDefaultMapping248",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "8",
+																						"mapping": "GeneratedVariableForDefaultMapping249",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "9",
+																						"mapping": "GeneratedVariableForDefaultMapping250",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "10",
+																						"mapping": "GeneratedVariableForDefaultMapping251",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "11",
+																						"mapping": "GeneratedVariableForDefaultMapping252",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "12",
+																						"mapping": "GeneratedVariableForDefaultMapping253",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "13",
+																						"mapping": "GeneratedVariableForDefaultMapping254",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "14",
+																						"mapping": "GeneratedVariableForDefaultMapping255",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "15",
+																						"mapping": "GeneratedVariableForDefaultMapping256",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					}
+																				]
+																			},
+																			{
+																				"componentIdentifier": "5",
+																				"mapping": "GeneratedVariableForDefaultMapping257",
+																				"tasks": [
+																					"DefaultTask"
+																				],
+																				"mappingTypeCategory": "Bitfield",
+																				"submappings": [
+																					{
+																						"componentIdentifier": "0",
+																						"mapping": "GeneratedVariableForDefaultMapping258",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "1",
+																						"mapping": "GeneratedVariableForDefaultMapping259",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "2",
+																						"mapping": "GeneratedVariableForDefaultMapping260",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "3",
+																						"mapping": "GeneratedVariableForDefaultMapping261",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "4",
+																						"mapping": "GeneratedVariableForDefaultMapping262",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "5",
+																						"mapping": "GeneratedVariableForDefaultMapping263",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "6",
+																						"mapping": "GeneratedVariableForDefaultMapping264",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "7",
+																						"mapping": "GeneratedVariableForDefaultMapping265",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "8",
+																						"mapping": "GeneratedVariableForDefaultMapping266",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "9",
+																						"mapping": "GeneratedVariableForDefaultMapping267",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "10",
+																						"mapping": "GeneratedVariableForDefaultMapping268",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "11",
+																						"mapping": "GeneratedVariableForDefaultMapping269",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "12",
+																						"mapping": "GeneratedVariableForDefaultMapping270",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "13",
+																						"mapping": "GeneratedVariableForDefaultMapping271",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "14",
+																						"mapping": "GeneratedVariableForDefaultMapping272",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "15",
+																						"mapping": "GeneratedVariableForDefaultMapping273",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					}
+																				]
+																			},
+																			{
+																				"componentIdentifier": "6",
+																				"mapping": "GeneratedVariableForDefaultMapping274",
+																				"tasks": [
+																					"DefaultTask"
+																				],
+																				"mappingTypeCategory": "Bitfield",
+																				"submappings": [
+																					{
+																						"componentIdentifier": "0",
+																						"mapping": "GeneratedVariableForDefaultMapping275",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "1",
+																						"mapping": "GeneratedVariableForDefaultMapping276",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "2",
+																						"mapping": "GeneratedVariableForDefaultMapping277",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "3",
+																						"mapping": "GeneratedVariableForDefaultMapping278",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "4",
+																						"mapping": "GeneratedVariableForDefaultMapping279",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "5",
+																						"mapping": "GeneratedVariableForDefaultMapping280",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "6",
+																						"mapping": "GeneratedVariableForDefaultMapping281",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "7",
+																						"mapping": "GeneratedVariableForDefaultMapping282",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "8",
+																						"mapping": "GeneratedVariableForDefaultMapping283",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "9",
+																						"mapping": "GeneratedVariableForDefaultMapping284",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "10",
+																						"mapping": "GeneratedVariableForDefaultMapping285",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "11",
+																						"mapping": "GeneratedVariableForDefaultMapping286",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "12",
+																						"mapping": "GeneratedVariableForDefaultMapping287",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "13",
+																						"mapping": "GeneratedVariableForDefaultMapping288",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "14",
+																						"mapping": "GeneratedVariableForDefaultMapping289",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "15",
+																						"mapping": "GeneratedVariableForDefaultMapping290",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					}
+																				]
+																			},
+																			{
+																				"componentIdentifier": "7",
+																				"mapping": "GeneratedVariableForDefaultMapping291",
+																				"tasks": [
+																					"DefaultTask"
+																				],
+																				"mappingTypeCategory": "Bitfield",
+																				"submappings": [
+																					{
+																						"componentIdentifier": "0",
+																						"mapping": "GeneratedVariableForDefaultMapping292",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "1",
+																						"mapping": "GeneratedVariableForDefaultMapping293",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "2",
+																						"mapping": "GeneratedVariableForDefaultMapping294",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "3",
+																						"mapping": "GeneratedVariableForDefaultMapping295",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "4",
+																						"mapping": "GeneratedVariableForDefaultMapping296",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "5",
+																						"mapping": "GeneratedVariableForDefaultMapping297",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "6",
+																						"mapping": "GeneratedVariableForDefaultMapping298",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "7",
+																						"mapping": "GeneratedVariableForDefaultMapping299",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "8",
+																						"mapping": "GeneratedVariableForDefaultMapping300",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "9",
+																						"mapping": "GeneratedVariableForDefaultMapping301",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "10",
+																						"mapping": "GeneratedVariableForDefaultMapping302",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "11",
+																						"mapping": "GeneratedVariableForDefaultMapping303",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "12",
+																						"mapping": "GeneratedVariableForDefaultMapping304",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "13",
+																						"mapping": "GeneratedVariableForDefaultMapping305",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "14",
+																						"mapping": "GeneratedVariableForDefaultMapping306",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "15",
+																						"mapping": "GeneratedVariableForDefaultMapping307",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					}
+																				]
+																			},
+																			{
+																				"componentIdentifier": "8",
+																				"mapping": "GeneratedVariableForDefaultMapping308",
+																				"tasks": [
+																					"DefaultTask"
+																				],
+																				"mappingTypeCategory": "Bitfield",
+																				"submappings": [
+																					{
+																						"componentIdentifier": "0",
+																						"mapping": "GeneratedVariableForDefaultMapping309",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "1",
+																						"mapping": "GeneratedVariableForDefaultMapping310",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "2",
+																						"mapping": "GeneratedVariableForDefaultMapping311",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "3",
+																						"mapping": "GeneratedVariableForDefaultMapping312",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "4",
+																						"mapping": "GeneratedVariableForDefaultMapping313",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "5",
+																						"mapping": "GeneratedVariableForDefaultMapping314",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "6",
+																						"mapping": "GeneratedVariableForDefaultMapping315",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "7",
+																						"mapping": "GeneratedVariableForDefaultMapping316",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "8",
+																						"mapping": "GeneratedVariableForDefaultMapping317",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "9",
+																						"mapping": "GeneratedVariableForDefaultMapping318",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "10",
+																						"mapping": "GeneratedVariableForDefaultMapping319",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "11",
+																						"mapping": "GeneratedVariableForDefaultMapping320",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "12",
+																						"mapping": "GeneratedVariableForDefaultMapping321",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "13",
+																						"mapping": "GeneratedVariableForDefaultMapping322",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "14",
+																						"mapping": "GeneratedVariableForDefaultMapping323",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "15",
+																						"mapping": "GeneratedVariableForDefaultMapping324",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					}
+																				]
+																			},
+																			{
+																				"componentIdentifier": "9",
+																				"mapping": "GeneratedVariableForDefaultMapping325",
+																				"tasks": [
+																					"DefaultTask"
+																				],
+																				"mappingTypeCategory": "Bitfield",
+																				"submappings": [
+																					{
+																						"componentIdentifier": "0",
+																						"mapping": "GeneratedVariableForDefaultMapping326",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "1",
+																						"mapping": "GeneratedVariableForDefaultMapping327",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "2",
+																						"mapping": "GeneratedVariableForDefaultMapping328",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "3",
+																						"mapping": "GeneratedVariableForDefaultMapping329",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "4",
+																						"mapping": "GeneratedVariableForDefaultMapping330",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "5",
+																						"mapping": "GeneratedVariableForDefaultMapping331",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "6",
+																						"mapping": "GeneratedVariableForDefaultMapping332",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "7",
+																						"mapping": "GeneratedVariableForDefaultMapping333",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "8",
+																						"mapping": "GeneratedVariableForDefaultMapping334",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "9",
+																						"mapping": "GeneratedVariableForDefaultMapping335",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "10",
+																						"mapping": "GeneratedVariableForDefaultMapping336",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "11",
+																						"mapping": "GeneratedVariableForDefaultMapping337",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "12",
+																						"mapping": "GeneratedVariableForDefaultMapping338",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "13",
+																						"mapping": "GeneratedVariableForDefaultMapping339",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "14",
+																						"mapping": "GeneratedVariableForDefaultMapping340",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					},
+																					{
+																						"componentIdentifier": "15",
+																						"mapping": "GeneratedVariableForDefaultMapping341",
+																						"tasks": [
+																							"DefaultTask"
+																						],
+																						"mappingTypeCategory": "Numeric"
+																					}
+																				]
+																			}
+																		]
+																	}
+																},
+																{
+																	"id": 1879052288,
+																	"baseType": "std:UDINT",
+																	"parameterValue": {
+																		"value": "16#03050B00"
+																	},
+																	"attributes": {
+																		"channel": "None",
+																		"onlineAccess": "Read",
+																		"offlineAccess": "Read"
+																	}
+																}
+															],
+															"inputChannelEntries": [
+																{
+																	"mappedVariable": "modbus.now",
+																	"mappingType": "std:WORD",
+																	"componentPath": "[0]",
+																	"pathToMappedComponent": "",
+																	"parameterIndex": 7
+																},
+																{
+																	"mappedVariable": "modbus.currentIndex",
+																	"mappingType": "std:WORD",
+																	"componentPath": "[1]",
+																	"pathToMappedComponent": "",
+																	"parameterIndex": 7
+																},
+																{
+																	"mappedVariable": "modbus.counter",
+																	"mappingType": "std:WORD",
+																	"componentPath": "[2]",
+																	"pathToMappedComponent": "",
+																	"parameterIndex": 7
+																},
+																{
+																	"mappedVariable": "modbus.counter2",
+																	"mappingType": "std:WORD",
+																	"componentPath": "[3]",
+																	"pathToMappedComponent": "",
+																	"parameterIndex": 7
+																},
+																{
+																	"mappedVariable": "modbus.led1",
+																	"mappingType": "std:BIT",
+																	"componentPath": ".0",
+																	"pathToMappedComponent": "",
+																	"parameterIndex": 9
+																},
+																{
+																	"mappedVariable": "modbus.led2",
+																	"mappingType": "std:BIT",
+																	"componentPath": ".1",
+																	"pathToMappedComponent": "",
+																	"parameterIndex": 9
+																},
+																{
+																	"mappedVariable": "modbus.led3",
+																	"mappingType": "std:BIT",
+																	"componentPath": ".2",
+																	"pathToMappedComponent": "",
+																	"parameterIndex": 9
+																},
+																{
+																	"mappedVariable": "modbus.led4",
+																	"mappingType": "std:BIT",
+																	"componentPath": ".3",
+																	"pathToMappedComponent": "",
+																	"parameterIndex": 9
+																},
+																{
+																	"mappedVariable": "modbus.isAbove",
+																	"mappingType": "std:BIT",
+																	"componentPath": ".4",
+																	"pathToMappedComponent": "",
+																	"parameterIndex": 9
+																}
+															],
+															"outputChannelEntries": [
+																{
+																	"mappedVariable": "modbus.valueFromCodesys",
+																	"mappingType": "std:WORD",
+																	"componentPath": "[0]",
+																	"pathToMappedComponent": "",
+																	"parameterIndex": 11
+																}
+															],
+															"functionBlocks": [
+																{
+																	"instanceName": "Modbus_TCP_Server",
+																	"fbName": "ModbusTCPSlave",
+																	"namespace": "IoDrvModbusTCP",
+																	"initialize": "Initialize",
+																	"fbTypeInputMethod": false,
+																	"cyclicCalls": []
+																}
+															],
+															"connectorSettings": {
+																"needsBusCycle": false,
+																"needsBusCycleBeforeRead": false
+															}
+														},
+														"inputChannelEntries": [],
+														"outputChannelEntries": [],
+														"downwardConnectors": [
+															{
+																"id": 2,
+																"moduleListIndex": 7,
+																"moduleType": 95,
+																"initialStatusFlag": 1,
+																"parameters": [],
+																"inputChannelEntries": [],
+																"outputChannelEntries": [],
+																"devices": [],
+																"functionBlocks": [],
+																"connectorSettings": {
+																	"needsBusCycle": false,
+																	"needsBusCycleBeforeRead": false
+																}
+															}
+														]
+													}
+												],
+												"functionBlocks": [
+													{
+														"instanceName": "Modbus_TCP_Client",
+														"fbName": "IoDrvModbusTCP",
+														"namespace": "IoDrvModbusTCP",
+														"initialize": "Initialize",
+														"fbTypeInputMethod": false,
+														"cyclicCalls": []
+													}
+												],
+												"connectorSettings": {
+													"needsBusCycle": true,
+													"needsBusCycleBeforeRead": true
+												}
+											}
+										]
+									}
+								],
+								"functionBlocks": [
+									{
+										"instanceName": "Ethernet",
+										"fbName": "IoDrvEthernet",
+										"namespace": "IoDrvEthernet",
+										"initialize": "Initialize",
+										"fbTypeInputMethod": false,
+										"cyclicCalls": []
+									}
+								],
+								"connectorSettings": {
+									"needsBusCycle": true,
+									"needsBusCycleBeforeRead": false
+								}
+							}
+						]
+					}
+				],
+				"functionBlocks": [],
+				"connectorSettings": {
+					"needsBusCycle": false,
+					"needsBusCycleBeforeRead": false
+				}
+			},
+			{
+				"id": 2,
+				"moduleListIndex": 8,
+				"moduleType": 769,
+				"initialStatusFlag": 1,
+				"parameters": [],
+				"inputChannelEntries": [],
+				"outputChannelEntries": [],
+				"devices": [],
+				"functionBlocks": [],
+				"connectorSettings": {
+					"needsBusCycle": false,
+					"needsBusCycleBeforeRead": false
+				}
+			}
+		]
+	},
+	"taskConfig": [
+		{
+			"taskName": "DefaultTask",
+			"taskGuid": "af9b083e-25fc-57c2-9136-923c88388e7c"
+		}
+	],
+	"typeDefinitions": {
+		"TypeDefinition_EthDiag": {
+			"$type": "Struct",
+			"iecType": "",
+			"iecTypeLib": "",
+			"components": [
+				{
+					"identifier": "CurrentIP",
+					"type": "std:STRING",
+					"onlineAccess": "ReadWrite",
+					"offlineAccess": "ReadWrite"
+				},
+				{
+					"identifier": "CurrentSubnet",
+					"type": "std:STRING",
+					"onlineAccess": "ReadWrite",
+					"offlineAccess": "ReadWrite"
+				},
+				{
+					"identifier": "CurrentGateway",
+					"type": "std:STRING",
+					"onlineAccess": "ReadWrite",
+					"offlineAccess": "ReadWrite"
+				},
+				{
+					"identifier": "IPChanges",
+					"type": "std:UDINT",
+					"onlineAccess": "ReadWrite",
+					"offlineAccess": "ReadWrite"
+				}
+			]
+		},
+		"TypeDefinition_ProtocolEnumType": {
+			"$type": "Enum",
+			"baseType": "std:BYTE",
+			"components": [
+				{
+					"identifier": "IEEE_802_3",
+					"value": "0"
+				},
+				{
+					"identifier": "IEEE_802_4",
+					"value": "1"
+				}
+			]
+		},
+		"TypeDefinition_IPConfigModeType": {
+			"$type": "Enum",
+			"baseType": "std:BYTE",
+			"components": [
+				{
+					"identifier": "FIXED",
+					"value": "0"
+				},
+				{
+					"identifier": "BOOTP",
+					"value": "1"
+				},
+				{
+					"identifier": "DHCP",
+					"value": "2"
+				}
+			]
+		},
+		"TypeDefinition_TransferRateType": {
+			"$type": "Enum",
+			"baseType": "std:BYTE",
+			"components": [
+				{
+					"identifier": "Auto",
+					"value": "0"
+				},
+				{
+					"identifier": "T10MBit_full",
+					"value": "1"
+				},
+				{
+					"identifier": "T10MBit_half",
+					"value": "2"
+				},
+				{
+					"identifier": "T100MBit_full",
+					"value": "3"
+				},
+				{
+					"identifier": "T100MBit_half",
+					"value": "4"
+				}
+			]
+		},
+		"TypeDefinition_NetworkStatusType": {
+			"$type": "Enum",
+			"baseType": "std:BYTE",
+			"components": [
+				{
+					"identifier": "WaitParameters",
+					"value": "0"
+				},
+				{
+					"identifier": "WaitConfiguration",
+					"value": "1"
+				},
+				{
+					"identifier": "DataExchanges",
+					"value": "2"
+				},
+				{
+					"identifier": "Error",
+					"value": "3"
+				},
+				{
+					"identifier": "DuplicateIPAddress",
+					"value": "4"
+				}
+			]
+		},
+		"TypeDefinition_ModuleStatusType": {
+			"$type": "Enum",
+			"baseType": "std:BYTE",
+			"components": [
+				{
+					"identifier": "WaitParameters",
+					"value": "0"
+				},
+				{
+					"identifier": "WaitConfiguration",
+					"value": "1"
+				},
+				{
+					"identifier": "Running",
+					"value": "2"
+				},
+				{
+					"identifier": "RecoverableError",
+					"value": "3"
+				}
+			]
+		},
+		"TypeDefinition_FBInstance": {
+			"$type": "Struct",
+			"iecType": "",
+			"iecTypeLib": "",
+			"components": [
+				{
+					"identifier": "FBType",
+					"type": "std:STRING",
+					"onlineAccess": "ReadWrite",
+					"offlineAccess": "ReadWrite"
+				},
+				{
+					"identifier": "FBDiagType",
+					"type": "std:STRING",
+					"onlineAccess": "ReadWrite",
+					"offlineAccess": "ReadWrite"
+				},
+				{
+					"identifier": "InitMethodName",
+					"type": "std:STRING",
+					"onlineAccess": "ReadWrite",
+					"offlineAccess": "ReadWrite"
+				}
+			]
+		},
+		"TypeDefinition_CHANNEL": {
+			"$type": "Struct",
+			"iecType": "",
+			"iecTypeLib": "",
+			"components": [
+				{
+					"identifier": "CycleTime",
+					"type": "std:DWORD",
+					"onlineAccess": "ReadWrite",
+					"offlineAccess": "ReadWrite"
+				},
+				{
+					"identifier": "ReadOffset",
+					"type": "std:UINT",
+					"onlineAccess": "ReadWrite",
+					"offlineAccess": "ReadWrite"
+				},
+				{
+					"identifier": "ReadLength",
+					"type": "std:UINT",
+					"onlineAccess": "ReadWrite",
+					"offlineAccess": "ReadWrite"
+				},
+				{
+					"identifier": "WriteOffset",
+					"type": "std:UINT",
+					"onlineAccess": "ReadWrite",
+					"offlineAccess": "ReadWrite"
+				},
+				{
+					"identifier": "WriteLength",
+					"type": "std:UINT",
+					"onlineAccess": "ReadWrite",
+					"offlineAccess": "ReadWrite"
+				},
+				{
+					"identifier": "ChannelName",
+					"type": "std:STRING",
+					"onlineAccess": "ReadWrite",
+					"offlineAccess": "ReadWrite"
+				},
+				{
+					"identifier": "AccessType",
+					"type": "std:STRING",
+					"onlineAccess": "ReadWrite",
+					"offlineAccess": "ReadWrite"
+				},
+				{
+					"identifier": "Trigger",
+					"type": "std:STRING",
+					"onlineAccess": "ReadWrite",
+					"offlineAccess": "ReadWrite"
+				},
+				{
+					"identifier": "ChannelComment",
+					"type": "std:STRING",
+					"onlineAccess": "ReadWrite",
+					"offlineAccess": "ReadWrite"
+				},
+				{
+					"identifier": "ErrorHandling",
+					"type": "std:STRING",
+					"onlineAccess": "ReadWrite",
+					"offlineAccess": "ReadWrite"
+				}
+			]
+		},
+		"TypeDefinition_CHANNEL2": {
+			"$type": "Struct",
+			"iecType": "",
+			"iecTypeLib": "",
+			"components": [
+				{
+					"identifier": "CycleTime",
+					"type": "std:DWORD",
+					"onlineAccess": "ReadWrite",
+					"offlineAccess": "ReadWrite"
+				},
+				{
+					"identifier": "FunctionCode",
+					"type": "std:UINT",
+					"onlineAccess": "ReadWrite",
+					"offlineAccess": "ReadWrite"
+				},
+				{
+					"identifier": "ReadOffset",
+					"type": "std:UINT",
+					"onlineAccess": "ReadWrite",
+					"offlineAccess": "ReadWrite"
+				},
+				{
+					"identifier": "ReadLength",
+					"type": "std:UINT",
+					"onlineAccess": "ReadWrite",
+					"offlineAccess": "ReadWrite"
+				},
+				{
+					"identifier": "WriteOffset",
+					"type": "std:UINT",
+					"onlineAccess": "ReadWrite",
+					"offlineAccess": "ReadWrite"
+				},
+				{
+					"identifier": "WriteLength",
+					"type": "std:UINT",
+					"onlineAccess": "ReadWrite",
+					"offlineAccess": "ReadWrite"
+				},
+				{
+					"identifier": "ChannelName",
+					"type": "std:STRING",
+					"onlineAccess": "ReadWrite",
+					"offlineAccess": "ReadWrite"
+				},
+				{
+					"identifier": "AccessType",
+					"type": "std:STRING",
+					"onlineAccess": "ReadWrite",
+					"offlineAccess": "ReadWrite"
+				},
+				{
+					"identifier": "Trigger",
+					"type": "std:STRING",
+					"onlineAccess": "ReadWrite",
+					"offlineAccess": "ReadWrite"
+				},
+				{
+					"identifier": "ChannelComment",
+					"type": "std:STRING",
+					"onlineAccess": "ReadWrite",
+					"offlineAccess": "ReadWrite"
+				},
+				{
+					"identifier": "ErrorHandling",
+					"type": "std:STRING",
+					"onlineAccess": "ReadWrite",
+					"offlineAccess": "ReadWrite"
+				}
+			]
+		},
+		"TypeDefinition_CHANNEL_PACKED": {
+			"$type": "Struct",
+			"iecType": "",
+			"iecTypeLib": "",
+			"components": [
+				{
+					"identifier": "FunctionCode",
+					"type": "std:UINT",
+					"onlineAccess": "ReadWrite",
+					"offlineAccess": "ReadWrite"
+				},
+				{
+					"identifier": "ReadOffset",
+					"type": "std:UINT",
+					"onlineAccess": "ReadWrite",
+					"offlineAccess": "ReadWrite"
+				},
+				{
+					"identifier": "ReadLength",
+					"type": "std:UINT",
+					"onlineAccess": "ReadWrite",
+					"offlineAccess": "ReadWrite"
+				},
+				{
+					"identifier": "WriteOffset",
+					"type": "std:UINT",
+					"onlineAccess": "ReadWrite",
+					"offlineAccess": "ReadWrite"
+				},
+				{
+					"identifier": "WriteLength",
+					"type": "std:UINT",
+					"onlineAccess": "ReadWrite",
+					"offlineAccess": "ReadWrite"
+				},
+				{
+					"identifier": "Trigger",
+					"type": "TypeDefinition_TriggerEnumType",
+					"onlineAccess": "ReadWrite",
+					"offlineAccess": "ReadWrite"
+				},
+				{
+					"identifier": "CycleTime",
+					"type": "std:DWORD",
+					"onlineAccess": "ReadWrite",
+					"offlineAccess": "ReadWrite"
+				},
+				{
+					"identifier": "ErrorHandling",
+					"type": "TypeDefinition_ErrorHandlingEnumType",
+					"onlineAccess": "ReadWrite",
+					"offlineAccess": "ReadWrite"
+				},
+				{
+					"identifier": "EnableRegisterBitMapping",
+					"type": "std:BOOL",
+					"onlineAccess": "ReadWrite",
+					"offlineAccess": "ReadWrite"
+				}
+			]
+		},
+		"TypeDefinition_CHANNEL_INIT": {
+			"$type": "Struct",
+			"iecType": "",
+			"iecTypeLib": "",
+			"components": [
+				{
+					"identifier": "FunctionCode",
+					"type": "std:UINT",
+					"onlineAccess": "ReadWrite",
+					"offlineAccess": "ReadWrite"
+				},
+				{
+					"identifier": "WriteOffset",
+					"type": "std:UINT",
+					"onlineAccess": "ReadWrite",
+					"offlineAccess": "ReadWrite"
+				},
+				{
+					"identifier": "WriteLength",
+					"type": "std:UINT",
+					"onlineAccess": "ReadWrite",
+					"offlineAccess": "ReadWrite"
+				},
+				{
+					"identifier": "InitValue",
+					"type": "std:UINT",
+					"onlineAccess": "ReadWrite",
+					"offlineAccess": "ReadWrite"
+				}
+			]
+		},
+		"TypeDefinition_ServerDiagT": {
+			"$type": "Struct",
+			"iecType": "",
+			"iecTypeLib": "",
+			"components": [
+				{
+					"identifier": "StructVersion",
+					"type": "std:UDINT",
+					"defaultValue": {
+						"value": "1"
+					},
+					"onlineAccess": "ReadWrite",
+					"offlineAccess": "None"
+				},
+				{
+					"identifier": "ComState",
+					"type": "TypeDefinition_ComState",
+					"onlineAccess": "ReadWrite",
+					"offlineAccess": "ReadWrite"
+				},
+				{
+					"identifier": "align",
+					"type": "std:UINT",
+					"onlineAccess": "ReadWrite",
+					"offlineAccess": "None"
+				},
+				{
+					"identifier": "RequestCounter",
+					"type": "std:UDINT",
+					"onlineAccess": "ReadWrite",
+					"offlineAccess": "ReadWrite"
+				},
+				{
+					"identifier": "ErrorCounter",
+					"type": "std:UDINT",
+					"onlineAccess": "ReadWrite",
+					"offlineAccess": "ReadWrite"
+				},
+				{
+					"identifier": "LastError",
+					"type": "TypeDefinition_LastErrorT",
+					"onlineAccess": "ReadWrite",
+					"offlineAccess": "ReadWrite"
+				}
+			]
+		},
+		"TypeDefinition_LastErrorT": {
+			"$type": "Struct",
+			"iecType": "",
+			"iecTypeLib": "",
+			"components": [
+				{
+					"identifier": "Timestamp",
+					"type": "std:DATE_AND_TIME",
+					"onlineAccess": "ReadWrite",
+					"offlineAccess": "ReadWrite"
+				},
+				{
+					"identifier": "ChannelIndex",
+					"type": "std:INT",
+					"defaultValue": {
+						"value": "-1"
+					},
+					"onlineAccess": "ReadWrite",
+					"offlineAccess": "ReadWrite"
+				},
+				{
+					"identifier": "ErrorCode",
+					"type": "TypeDefinition_MBErrorCode",
+					"defaultValue": {
+						"value": "16#FF"
+					},
+					"onlineAccess": "ReadWrite",
+					"offlineAccess": "ReadWrite"
+				}
+			]
+		},
+		"TypeDefinition_TriggerEnumType": {
+			"$type": "Enum",
+			"baseType": "std:USINT",
+			"components": [
+				{
+					"identifier": "TRIGGER_APP",
+					"value": "0"
+				},
+				{
+					"identifier": "TRIGGER_CYCLIC",
+					"value": "5"
+				},
+				{
+					"identifier": "TRIGGER_RISING_EDGE",
+					"value": "6"
+				}
+			]
+		},
+		"TypeDefinition_ErrorHandlingEnumType": {
+			"$type": "Enum",
+			"baseType": "std:BOOL",
+			"components": [
+				{
+					"identifier": "KeepLastValue",
+					"value": "true"
+				},
+				{
+					"identifier": "SetZero",
+					"value": "false"
+				}
+			]
+		},
+		"TypeDefinition_ComState": {
+			"$type": "Enum",
+			"baseType": "std:UINT",
+			"components": [
+				{
+					"identifier": "OFF",
+					"value": "0"
+				},
+				{
+					"identifier": "CONNECTING",
+					"value": "1"
+				},
+				{
+					"identifier": "CONNECTED",
+					"value": "2"
+				},
+				{
+					"identifier": "DISCONNECTING",
+					"value": "3"
+				},
+				{
+					"identifier": "SOCKET_ERROR",
+					"value": "4"
+				}
+			]
+		},
+		"TypeDefinition_MBErrorCode": {
+			"$type": "Enum",
+			"baseType": "std:UINT",
+			"components": [
+				{
+					"identifier": "RESPONSE_SUCCESS",
+					"value": "0"
+				},
+				{
+					"identifier": "ILLEGAL_FUNCTION",
+					"value": "1"
+				},
+				{
+					"identifier": "ILLEGAL_DATA_ADDRESS",
+					"value": "2"
+				},
+				{
+					"identifier": "ILLEGAL_DATA_VALUE",
+					"value": "3"
+				},
+				{
+					"identifier": "SERVER_DEVICE_FAILURE",
+					"value": "4"
+				},
+				{
+					"identifier": "ACKNOWLEDGE",
+					"value": "5"
+				},
+				{
+					"identifier": "SERVER_DEVICE_BUSY",
+					"value": "6"
+				},
+				{
+					"identifier": "MEMORY_PARITY_ERROR",
+					"value": "8"
+				},
+				{
+					"identifier": "GATEWAY_PATH_UNAVAILABLE",
+					"value": "16#0A"
+				},
+				{
+					"identifier": "GATEWAY_TARGET_FAILED_TO_RESPOND",
+					"value": "16#0B"
+				},
+				{
+					"identifier": "RESPONSE_TIMEOUT",
+					"value": "16#A1"
+				},
+				{
+					"identifier": "RESPONSE_CRC_FAIL",
+					"value": "16#A2"
+				},
+				{
+					"identifier": "SERVER",
+					"value": "16#A3"
+				},
+				{
+					"identifier": "RESPONSE_WRONG_FUNCTIONCODE",
+					"value": "16#A4"
+				},
+				{
+					"identifier": "TCP_COMMUNICATION_ERROR",
+					"value": "16#A5"
+				},
+				{
+					"identifier": "RESPONSE_INVALID_DATA",
+					"value": "16#A6"
+				},
+				{
+					"identifier": "RESPONSE_INVALID_PROTOCOL",
+					"value": "16#A7"
+				},
+				{
+					"identifier": "RESPONSE_INVALID_HEADER",
+					"value": "16#A8"
+				},
+				{
+					"identifier": "UNDEFINED",
+					"value": "16#FF"
+				}
+			]
+		},
+		"TypeDefinition_REGISTERBITS": {
+			"$type": "Bitfield",
+			"baseType": "std:WORD",
+			"iecType": "",
+			"iecTypeLib": "",
+			"components": [
+				{
+					"identifier": "Bit0",
+					"type": "std:BOOL",
+					"defaultValue": {
+						"value": "FALSE"
+					},
+					"onlineAccess": "ReadWrite",
+					"offlineAccess": "ReadWrite"
+				},
+				{
+					"identifier": "Bit1",
+					"type": "std:BOOL",
+					"defaultValue": {
+						"value": "FALSE"
+					},
+					"onlineAccess": "ReadWrite",
+					"offlineAccess": "ReadWrite"
+				},
+				{
+					"identifier": "Bit2",
+					"type": "std:BOOL",
+					"defaultValue": {
+						"value": "FALSE"
+					},
+					"onlineAccess": "ReadWrite",
+					"offlineAccess": "ReadWrite"
+				},
+				{
+					"identifier": "Bit3",
+					"type": "std:BOOL",
+					"defaultValue": {
+						"value": "FALSE"
+					},
+					"onlineAccess": "ReadWrite",
+					"offlineAccess": "ReadWrite"
+				},
+				{
+					"identifier": "Bit4",
+					"type": "std:BOOL",
+					"defaultValue": {
+						"value": "FALSE"
+					},
+					"onlineAccess": "ReadWrite",
+					"offlineAccess": "ReadWrite"
+				},
+				{
+					"identifier": "Bit5",
+					"type": "std:BOOL",
+					"defaultValue": {
+						"value": "FALSE"
+					},
+					"onlineAccess": "ReadWrite",
+					"offlineAccess": "ReadWrite"
+				},
+				{
+					"identifier": "Bit6",
+					"type": "std:BOOL",
+					"defaultValue": {
+						"value": "FALSE"
+					},
+					"onlineAccess": "ReadWrite",
+					"offlineAccess": "ReadWrite"
+				},
+				{
+					"identifier": "Bit7",
+					"type": "std:BOOL",
+					"defaultValue": {
+						"value": "FALSE"
+					},
+					"onlineAccess": "ReadWrite",
+					"offlineAccess": "ReadWrite"
+				},
+				{
+					"identifier": "Bit8",
+					"type": "std:BOOL",
+					"defaultValue": {
+						"value": "FALSE"
+					},
+					"onlineAccess": "ReadWrite",
+					"offlineAccess": "ReadWrite"
+				},
+				{
+					"identifier": "Bit9",
+					"type": "std:BOOL",
+					"defaultValue": {
+						"value": "FALSE"
+					},
+					"onlineAccess": "ReadWrite",
+					"offlineAccess": "ReadWrite"
+				},
+				{
+					"identifier": "Bit10",
+					"type": "std:BOOL",
+					"defaultValue": {
+						"value": "FALSE"
+					},
+					"onlineAccess": "ReadWrite",
+					"offlineAccess": "ReadWrite"
+				},
+				{
+					"identifier": "Bit11",
+					"type": "std:BOOL",
+					"defaultValue": {
+						"value": "FALSE"
+					},
+					"onlineAccess": "ReadWrite",
+					"offlineAccess": "ReadWrite"
+				},
+				{
+					"identifier": "Bit12",
+					"type": "std:BOOL",
+					"defaultValue": {
+						"value": "FALSE"
+					},
+					"onlineAccess": "ReadWrite",
+					"offlineAccess": "ReadWrite"
+				},
+				{
+					"identifier": "Bit13",
+					"type": "std:BOOL",
+					"defaultValue": {
+						"value": "FALSE"
+					},
+					"onlineAccess": "ReadWrite",
+					"offlineAccess": "ReadWrite"
+				},
+				{
+					"identifier": "Bit14",
+					"type": "std:BOOL",
+					"defaultValue": {
+						"value": "FALSE"
+					},
+					"onlineAccess": "ReadWrite",
+					"offlineAccess": "ReadWrite"
+				},
+				{
+					"identifier": "Bit15",
+					"type": "std:BOOL",
+					"defaultValue": {
+						"value": "FALSE"
+					},
+					"onlineAccess": "ReadWrite",
+					"offlineAccess": "ReadWrite"
+				}
+			]
+		}
+	}
+}

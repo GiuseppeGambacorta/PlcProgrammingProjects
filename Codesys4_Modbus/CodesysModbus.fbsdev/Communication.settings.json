@@ -1,0 +1,22 @@
+{
+    "device": {
+        "nodeName": "THINKPAD"
+    },
+    "gateway": {
+        "name": "primo",
+        "hostName": "localhost",
+        "port": 1217,
+        "type": "CODESYS.GwV3"
+    },
+    "scanInformation": {
+        "nodeName": "THINKPAD",
+        "lastKnownAddress": "0001",
+        "targetId": "0000 0004",
+        "targetType": "Programmable",
+        "targetVersion": "3.5.22.30",
+        "targetVendor": "CODESYS",
+        "serialNumber": "723A36EF-2C11CDB3-ABF6C79D-AF79ED5E",
+        "targetName": "CODESYS Control Win V3 x64",
+        "encryptedCommunication": "Supported"
+    }
+}

@@ -1,0 +1,124 @@
+{
+    "deviceDescription": {
+        "identification": {
+            "type": 89,
+            "id": "0000 0005",
+            "version": "4.6.0.0"
+        }
+    },
+    "extensions": {
+        "modbus.tcp.server": {
+            "configuration": {
+                "ipAddress": "192.168.1.155",
+                "responseTimeout": 1000,
+                "port": 502,
+                "enableFallbackIp": false,
+                "secondIpAddress": "0.0.0.0",
+                "preferredLine": 0,
+                "connectInactiveLine": true,
+                "modbusChannels": [
+                    {
+                        "index": 0,
+                        "channelName": "ReadInputRegisters",
+                        "accessType": 4,
+                        "trigger": 5,
+                        "cycleTime": 100,
+                        "readOffset": 0,
+                        "readLength": 10,
+                        "errorHandling": 0,
+                        "writeOffset": 0,
+                        "writeLength": 0,
+                        "comment": ""
+                    },
+                    {
+                        "index": 1,
+                        "channelName": "ReadDiscreteinputs",
+                        "accessType": 2,
+                        "trigger": 5,
+                        "cycleTime": 100,
+                        "readOffset": 0,
+                        "readLength": 5,
+                        "errorHandling": 0,
+                        "writeOffset": 0,
+                        "writeLength": 0,
+                        "comment": ""
+                    },
+                    {
+                        "index": 2,
+                        "channelName": "WriteRegisters",
+                        "accessType": 16,
+                        "trigger": 5,
+                        "cycleTime": 100,
+                        "readOffset": 0,
+                        "readLength": 0,
+                        "errorHandling": 0,
+                        "writeOffset": 0,
+                        "writeLength": 10,
+                        "comment": ""
+                    }
+                ],
+                "modbusInitChannels": []
+            },
+            "ioMapping": {
+                "inputMappings": [
+                    {
+                        "name": "ReadInputRegisters",
+                        "mappingTarget": "",
+                        "components": {
+                            "0": {
+                                "mappingTarget": "modbus.now"
+                            },
+                            "1": {
+                                "mappingTarget": "modbus.currentIndex"
+                            },
+                            "2": {
+                                "mappingTarget": "modbus.counter"
+                            },
+                            "3": {
+                                "mappingTarget": "modbus.counter2"
+                            }
+                        }
+                    },
+                    {
+                        "name": "ReadDiscreteinputs",
+                        "mappingTarget": "",
+                        "components": {
+                            "0": {
+                                "mappingTarget": "",
+                                "components": {
+                                    "0": {
+                                        "mappingTarget": "modbus.led1"
+                                    },
+                                    "1": {
+                                        "mappingTarget": "modbus.led2"
+                                    },
+                                    "2": {
+                                        "mappingTarget": "modbus.led3"
+                                    },
+                                    "3": {
+                                        "mappingTarget": "modbus.led4"
+                                    },
+                                    "4": {
+                                        "mappingTarget": "modbus.isAbove"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                ],
+                "outputMappings": [
+                    {
+                        "name": "WriteRegisters",
+                        "mappingTarget": "",
+                        "components": {
+                            "0": {
+                                "mappingTarget": "modbus.valueFromCodesys"
+                            }
+                        }
+                    }
+                ],
+                "bidirectionalMappings": []
+            }
+        }
+    }
+}

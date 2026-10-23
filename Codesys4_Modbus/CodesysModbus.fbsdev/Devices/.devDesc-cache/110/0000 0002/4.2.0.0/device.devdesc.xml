@@ -1,0 +1,420 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DeviceDescription xmlns="http://www.3s-software.com/schemas/DeviceDescription-1.0.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ts="http://www.3s-software.com/schemas/TargetSettings-0.1.xsd" xsi:schemaLocation="http://www.3s-software.com/schemas/DeviceDescription-1.0.xsd https://de.codesys.com/fileadmin/data/schemas/DeviceDescription-1.0.xsd http://www.3s-software.com/schemas/TargetSettings-0.1.xsd https://de.codesys.com/fileadmin/data/schemas/TargetSettings-0.1.xsd">
+  <Types namespace="localTypes">
+    <EnumType basetype="std:BYTE" name="ProtocolEnumType">
+      <Enum identifier="IEEE_802_3">
+        <Value>0</Value>
+        <VisibleName name="local:IEEE_802_3">IEEE 802.3</VisibleName>
+      </Enum>
+      <Enum identifier="IEEE_802_4">
+        <Value>1</Value>
+        <VisibleName name="local:Ethernet2">Ethernet 2</VisibleName>
+      </Enum>
+    </EnumType>
+    <EnumType basetype="std:BYTE" name="IPConfigModeType">
+      <Enum identifier="FIXED">
+        <Value>0</Value>
+        <VisibleName name="local:FIXED">FIXED</VisibleName>
+      </Enum>
+      <Enum identifier="BOOTP">
+        <Value>1</Value>
+        <VisibleName name="local:BOOTP">BOOTP</VisibleName>
+      </Enum>
+      <Enum identifier="DHCP">
+        <Value>2</Value>
+        <VisibleName name="local:DHCP">DHCP</VisibleName>
+      </Enum>
+    </EnumType>
+    <EnumType basetype="std:BYTE" name="TransferRateType">
+      <Enum identifier="Auto">
+        <Value>0</Value>
+        <VisibleName name="local:Auto">Auto</VisibleName>
+      </Enum>
+      <Enum identifier="T10MBit_full">
+        <Value>1</Value>
+        <VisibleName name="local:10MBit_full">10 MBit full</VisibleName>
+      </Enum>
+      <Enum identifier="T10MBit_half">
+        <Value>2</Value>
+        <VisibleName name="local:10MBit_half">10 MBit half</VisibleName>
+      </Enum>
+      <Enum identifier="T100MBit_full">
+        <Value>3</Value>
+        <VisibleName name="local:100MBit_full">100 MBit full</VisibleName>
+      </Enum>
+      <Enum identifier="T100MBit_half">
+        <Value>4</Value>
+        <VisibleName name="local:100MBit_half">100 MBit half</VisibleName>
+      </Enum>
+    </EnumType>
+    <EnumType basetype="std:BYTE" name="NetworkStatusType">
+      <Enum identifier="WaitParameters">
+        <Value>0</Value>
+        <VisibleName name="local:WaitParameters">Wait Parameters</VisibleName>
+      </Enum>
+      <Enum identifier="WaitConfiguration">
+        <Value>1</Value>
+        <VisibleName name="local:WaitConfiguration">Wait Configuration</VisibleName>
+      </Enum>
+      <Enum identifier="DataExchanges">
+        <Value>2</Value>
+        <VisibleName name="local:DataExchanges">Data Exchanges</VisibleName>
+      </Enum>
+      <Enum identifier="Error">
+        <Value>3</Value>
+        <VisibleName name="local:Error">Error</VisibleName>
+      </Enum>
+      <Enum identifier="DuplicateIPAddress">
+        <Value>4</Value>
+        <VisibleName name="local:DuplicateIPAddress">Duplicate IP Address</VisibleName>
+      </Enum>
+    </EnumType>
+    <EnumType basetype="std:BYTE" name="ModuleStatusType">
+      <Enum identifier="WaitParameters">
+        <Value>0</Value>
+        <VisibleName name="local:WaitParameters">Wait Parameters</VisibleName>
+      </Enum>
+      <Enum identifier="WaitConfiguration">
+        <Value>1</Value>
+        <VisibleName name="local:WaitConfiguration">Wait Configuration</VisibleName>
+      </Enum>
+      <Enum identifier="Running">
+        <Value>2</Value>
+        <VisibleName name="local:Running">Running</VisibleName>
+      </Enum>
+      <Enum identifier="RecoverableError">
+        <Value>3</Value>
+        <VisibleName name="local:RecoverableError">Recoverable Error</VisibleName>
+      </Enum>
+    </EnumType>
+    <StructType name="EthDiag">
+      <Component identifier="CurrentIP" type="std:STRING">
+        <Default />
+        <VisibleName name="local:EthDiag.CurrentIP">Current IP</VisibleName>
+        <Description name="local:EthDiag.CurrentIPDesc">
+        </Description>
+      </Component>
+      <Component identifier="CurrentSubnet" type="std:STRING">
+        <Default />
+        <VisibleName name="local:EthDiag.CurrentSubnet">Current subnet mask</VisibleName>
+        <Description name="local:EthDiag.CurrentSubnetDesc">
+        </Description>
+      </Component>
+      <Component identifier="CurrentGateway" type="std:STRING">
+        <Default />
+        <VisibleName name="local:EthDiag.CurrentGateway">Current gateway address</VisibleName>
+        <Description name="local:EthDiag.CurrentGatewayDesc">
+        </Description>
+      </Component>
+      <Component identifier="IPChanges" type="std:UDINT">
+        <Default />
+        <VisibleName name="local:EthDiag.IPChanges">IP changes</VisibleName>
+        <Description name="local:EthDiag.IPChangesDesc">Amount of IP configuration changes since startup (IP or gateway address or subnet mask)</Description>
+      </Component>
+    </StructType>
+  </Types>
+  <Files namespace="local">
+    <Language lang="en">
+      <File fileref="local" identifier="EthernetStrings">
+        <LocalFile>EthernetStrings.xml</LocalFile>
+      </File>
+    </Language>
+  </Files>
+  <Device>
+    <DeviceIdentification>
+      <Type>110</Type>
+      <Id>0000 0002</Id>
+      <Version>4.2.0.0</Version>
+    </DeviceIdentification>
+    <DeviceInfo>
+      <Name name="local:typename">Ethernet</Name>
+      <Description name="local:typedescription">Ethernet Link.</Description>
+      <Vendor name="local:_3S">CODESYS</Vendor>
+      <OrderNumber>-</OrderNumber>
+      <Category>110</Category>
+      <!-- Ethernet Category -->
+      <Category>109</Category>
+      <!-- EtherNet/IP Category -->
+      <Category>85</Category>
+      <!-- Profinet Category -->
+      <Category>240</Category>
+      <!-- Home&Building Category -->
+      <AdditionalFiles>
+        <File key="ExternalStrings" name="local:EthernetStrings">EthernetStrings.xml</File>
+      </AdditionalFiles>
+    </DeviceInfo>
+    <Connector connectorId="1" explicit="false" hostpath="-1" interface="Common.PCI" moduleType="110" role="child" initialStatusFlag="241">
+      <InterfaceName name="local:NONE">Ethernet</InterfaceName>
+      <Slot allowEmpty="false" count="1" />
+    </Connector>
+    <Connector connectorId="2" explicit="false" hostpath="1" interface="Common.Ethernet" moduleType="111" role="parent" initialStatusFlag="241">
+      <InterfaceName name="local:NONE">Ethernet Device</InterfaceName>
+      <Var />
+      <HostParameterSet>
+        <!-- Config Parameters -->
+        <Parameter ParameterId="0000" type="std:ARRAY[0..3] OF BYTE">
+          <Attributes offlineaccess="readwrite" download="true" functional="false" />
+          <Default>[192, 168, 0, 1]</Default>
+          <Name name="local:Parameter.IPAddress">IPAddress</Name>
+          <Description name="local:Parameter.IPAddress">Configure IP Address of the Controller on the EtherNet bus (IP).</Description>
+        </Parameter>
+        <Parameter ParameterId="0001" type="std:ARRAY[0..3] OF BYTE">
+          <Attributes offlineaccess="readwrite" download="true" functional="false" />
+          <Default>[255, 255, 255, 0]</Default>
+          <Name name="local:Parameter.SubnetMask">SubnetMask</Name>
+          <Description name="local:Parameter.SubnetMask">Configure IP Address of the Controller on the EtherNet bus (Mask).</Description>
+        </Parameter>
+        <Parameter ParameterId="0002" type="std:ARRAY[0..3] OF BYTE">
+          <Attributes offlineaccess="readwrite" download="true" functional="false" />
+          <Default>[0, 0, 0, 0]</Default>
+          <Name name="local:Parameter.GatewayAddress">GatewayAddress</Name>
+          <Description name="local:Parameter.GatewayAddress">Configure IP Address of the Controller on the EtherNet bus (Gateway).</Description>
+        </Parameter>
+        <Parameter ParameterId="0003" type="localTypes:TransferRateType">
+          <Attributes offlineaccess="readwrite" download="true" functional="false" />
+          <Default>0</Default>
+          <Name name="local:Parameter.TransferRate">TransferRate</Name>
+          <Description name="local:Parameter.TransferRate">Configure Bus speed of the EtherNet.</Description>
+        </Parameter>
+        <Parameter ParameterId="0004" type="localTypes:IPConfigModeType">
+          <Attributes offlineaccess="readwrite" download="true" functional="false" />
+          <Default>1</Default>
+          <Name name="local:Parameter.IPConfigMode">IPConfigMode</Name>
+          <Description name="local:Parameter.IPConfigMode">Configure the method this device uses for obtaining an IP address.</Description>
+        </Parameter>
+        <Parameter ParameterId="0005" type="std:STRING">
+          <Attributes offlineaccess="readwrite" download="true" functional="false" />
+          <Default>'myDevice'</Default>
+          <Name name="local:Parameter.DeviceName">DeviceName</Name>
+          <Description name="local:Parameter.DeviceName">Configure the Network-/Device- Name, e.g. for DHCP addressing Use case.</Description>
+        </Parameter>
+        <Parameter ParameterId="0006" type="std:BOOL">
+          <Attributes offlineaccess="readwrite" download="true" functional="false" />
+          <Default>true</Default>
+          <Name name="local:Parameter.WebServer">WebServer</Name>
+          <Description name="local:Parameter.WebServer">Configure activation of WEB server</Description>
+        </Parameter>
+        <Parameter ParameterId="0009" type="std:ARRAY[0..5] OF BYTE">
+          <Attributes offlineaccess="read" download="true" functional="false" />
+          <Default>[16#0, 16#0, 16#0, 16#0, 16#0, 16#0]</Default>
+          <Name name="local:Parameter.MAC">MACAddress</Name>
+          <Description name="local:Parameter.MAC">MAC Address</Description>
+        </Parameter>
+        <Parameter ParameterId="0010" type="std:STRING">
+          <Attributes offlineaccess="readwrite" download="true" functional="false" />
+          <Default>''</Default>
+          <Name name="local:Parameter.NetworkInterfaceName">NetworkInterfaceName</Name>
+          <Description name="local:Parameter.NetworkInterfaceName">Configure Name of Network Interface</Description>
+        </Parameter>
+        <Parameter ParameterId="0011" type="localTypes:ProtocolEnumType">
+          <Attributes offlineaccess="readwrite" download="true" functional="false" />
+          <Default>0</Default>
+          <Name name="local:Parameter.EtherNetProtocol">EtherNetProtocol</Name>
+          <Description name="local:Parameter.EtherNetProtocol">Configure EtherNet Protocol (Ethernet2 or 802.3 frames)</Description>
+        </Parameter>
+        <Parameter ParameterId="0012" type="std:WSTRING">
+          <Attributes offlineaccess="readwrite" download="true" functional="false" />
+          <Default>""</Default>
+          <Name name="local:Parameter.NetworkInterfaceName">NetworkInterfaceName</Name>
+          <Description name="local:Parameter.NetworkInterfaceName">Configure Name of Network Interface - Unicode</Description>
+        </Parameter>
+        <Parameter ParameterId="0013" type="std:BOOL">
+          <Attributes offlineaccess="readwrite" download="true" functional="false" />
+          <Default>false</Default>
+          <Name name="local:Parameter.SetCommunicationSettingsName">SaveCommunicationSettings</Name>
+          <Description name="local:Parameter.SetCommunicationSettingsDesc">TRUE: IP, SubnetMask and GatewayAddress will be set to the configured values at the PLC's OS!</Description>
+        </Parameter>
+        <!-- Status Parameters -->
+        <Parameter ParameterId="0100" type="std:ARRAY[0..3] OF BYTE">
+          <Attributes offlineaccess="read" download="true" functional="false" />
+          <Default>[192, 168, 0, 1]</Default>
+          <Name name="local:Parameter.IPAddress">IPAddress</Name>
+          <Description name="local:Parameter.IPAddress">Actual IP Address of the Controller on the EtherNet bus (IP).</Description>
+        </Parameter>
+        <Parameter ParameterId="0101" type="std:ARRAY[0..3] OF BYTE">
+          <Attributes offlineaccess="read" download="true" functional="false" />
+          <Default>[255, 255, 255, 0]</Default>
+          <Name name="local:Parameter.SubnetMask">SubnetMask</Name>
+          <Description name="local:Parameter.SubnetMask">Actual IP Address of the Controller on the EtherNet bus (Mask).</Description>
+        </Parameter>
+        <Parameter ParameterId="0102" type="std:ARRAY[0..3] OF BYTE">
+          <Attributes offlineaccess="read" download="true" functional="false" />
+          <Default>[0, 0, 0, 0]</Default>
+          <Name name="local:Parameter.GatewayAddress">GatewayAddress</Name>
+          <Description name="local:Parameter.GatewayAddress">Actual IP Address of the Controller on the EtherNet bus (Gateway).</Description>
+        </Parameter>
+        <Parameter ParameterId="0103" type="localTypes:TransferRateType">
+          <Attributes offlineaccess="read" download="true" functional="false" />
+          <Default>0</Default>
+          <Name name="local:Parameter.TransferRate">TransferRate</Name>
+          <Description name="local:Parameter.TransferRate">Actual Bus speed of the EtherNet.</Description>
+        </Parameter>
+        <Parameter ParameterId="0104" type="localTypes:IPConfigModeType">
+          <Attributes offlineaccess="read" download="true" functional="false" />
+          <Default>1</Default>
+          <Name name="local:Parameter.IPConfigMode">IPConfigMode</Name>
+          <Description name="local:Parameter.IPConfigMode">Actual method this device uses for obtaining an IP address.</Description>
+        </Parameter>
+        <Parameter ParameterId="0105" type="std:STRING">
+          <Attributes offlineaccess="read" download="true" functional="false" />
+          <Default>'my Device'</Default>
+          <Name name="local:Parameter.DeviceName">DeviceName</Name>
+          <Description name="local:Parameter.DeviceName">Actual Network-/Device- Name, e.g. for DHCP addressing Use case.</Description>
+        </Parameter>
+        <Parameter ParameterId="0106" type="std:BOOL">
+          <Attributes offlineaccess="read" download="true" functional="false" />
+          <Default>true</Default>
+          <Name name="local:Parameter.WebServer">WebServer</Name>
+          <Description name="local:Parameter.WebServer">Actual activation state of WEB server</Description>
+        </Parameter>
+        <Parameter ParameterId="0107" type="localTypes:NetworkStatusType">
+          <Attributes offlineaccess="read" download="true" functional="false" />
+          <Default>1</Default>
+          <Name name="local:Parameter.NetworkStatus">NetworkStatus</Name>
+          <Description name="local:Parameter.NetworkStatus">Actual network status.</Description>
+        </Parameter>
+        <Parameter ParameterId="0108" type="localTypes:ModuleStatusType">
+          <Attributes offlineaccess="read" download="true" functional="false" />
+          <Default>1</Default>
+          <Name name="local:Parameter.ModuleStatus">ModuleStatus</Name>
+          <Description name="local:Parameter.NetworkStatus">Actual module status.</Description>
+        </Parameter>
+        <Parameter ParameterId="0109" type="std:ARRAY[0..5] OF BYTE">
+          <Attributes offlineaccess="read" download="true" functional="false" />
+          <Default>[16#0, 16#0, 16#0, 16#0, 16#0, 16#0]</Default>
+          <Name name="local:Parameter.MAC">MACAddress</Name>
+          <Description name="local:Parameter.MAC">Actual MAC Address.</Description>
+        </Parameter>
+        <Parameter ParameterId="0110" type="std:STRING">
+          <Attributes offlineaccess="read" download="true" functional="false" />
+          <Default>'ether 0'</Default>
+          <Name name="local:Parameter.NetworkInterfaceName">NetworkInterfaceName</Name>
+          <Description name="local:Parameter.NetworkInterfaceName">Actual Name of Network Interface</Description>
+        </Parameter>
+        <Parameter ParameterId="0111" type="localTypes:ProtocolEnumType">
+          <Attributes offlineaccess="read" download="true" functional="false" />
+          <Default>0</Default>
+          <Name name="local:Parameter.EtherNetProtocol">EtherNetProtocol</Name>
+          <Description name="local:Parameter.EtherNetProtocol">Actual configured EtherNet Protocol</Description>
+        </Parameter>
+        <!-- Redundancy Paramters -->
+        <ParameterSection>
+          <Name name="local:SettingsPLC2">IP-Settings PLC 2</Name>
+          <Parameter ParameterId="0200" type="std:WSTRING">
+            <Attributes offlineaccess="readwrite" download="true" functional="false" />
+            <Default>""</Default>
+            <Name name="local:Parameter.NetworkInterfaceName">NetworkInterfaceName</Name>
+            <Description name="local:Parameter.NetworkInterfaceName">Configured Name of Ethernet Interface (PLC 2).</Description>
+          </Parameter>
+          <Parameter ParameterId="0201" type="std:ARRAY[0..3] OF BYTE">
+            <Attributes offlineaccess="readwrite" download="true" functional="false" />
+            <Default>[192, 168, 0, 2]</Default>
+            <Name name="local:Parameter.IPAddress">IPAddress</Name>
+            <Description name="local:Parameter.IPAddress">Configured IP Address of the Ethernet Interface (PLC 2).</Description>
+          </Parameter>
+          <Parameter ParameterId="0202" type="std:ARRAY[0..3] OF BYTE">
+            <Attributes offlineaccess="readwrite" download="true" functional="false" />
+            <Default>[255, 255, 255, 0]</Default>
+            <Name name="local:Parameter.SubnetMask">SubnetMask</Name>
+            <Description name="local:Parameter.SubnetMask">Configured Subnet Mask of the Ethernet Interface (PLC 2).</Description>
+          </Parameter>
+          <Parameter ParameterId="0203" type="std:ARRAY[0..3] OF BYTE">
+            <Attributes offlineaccess="readwrite" download="true" functional="false" />
+            <Default>[0, 0, 0, 0]</Default>
+            <Name name="local:Parameter.GatewayAddress">GatewayAddress</Name>
+            <Description name="local:Parameter.GatewayAddress">Configured Default Gateway of the Ethernet Interface (PLC 2).</Description>
+          </Parameter>
+        </ParameterSection>
+        <Parameter ParameterId="2006" type="localTypes:EthDiag">
+          <Attributes channel="diag" download="true" offlineaccess="read" onlineaccess="read" />
+          <Default />
+          <Name name="local:2006">EthDiag</Name>
+          <Description name="local:2006.Desc">Ethernet diagnostic information</Description>
+        </Parameter>
+        <Parameter ParameterId="2007" type="std:BOOL">
+          <Attributes offlineaccess="none" onlineaccess="none" download="true" functional="false" channel="diagAck" />
+          <Default>FALSE</Default>
+          <Name name="local:DiagAck">Diag Acknowledge</Name>
+          <Description name="local:DiagAck">Diag Acknowledge</Description>
+        </Parameter>
+        <!-- configure if optional paramters are visible:  -->
+        <Parameter ParameterId="10000000" type="std:BOOL">
+          <Attributes offlineaccess="none" download="true" functional="false" />
+          <Default>false</Default>
+          <Name name="local:Parameter.WebserverVisible">WebserverVisible</Name>
+          <Description name="local:Parameter.WebserverVisible">enable/disable configuration of parameter WebServer</Description>
+        </Parameter>
+        <Parameter ParameterId="10000001" type="std:BOOL">
+          <Attributes offlineaccess="none" download="true" functional="false" />
+          <Default>true</Default>
+          <Name name="local:Parameter.NetworkInterface">NetworkInterfaceVisible</Name>
+          <Description name="local:Parameter.NetworkInterface">enable/disable configuration of parameter NetworkInterfaceName</Description>
+        </Parameter>
+        <!-- Parameter enables or disables Online-Status Screen. If not defined, default = false -->
+        <Parameter ParameterId="10000002" type="std:BOOL">
+          <Attributes offlineaccess="none" download="false" functional="false" />
+          <!-- offlineacces="none"/"readonly" ==> overwrite parameter at Device-Update ! -->
+          <Default>false</Default>
+          <Name name="local:Parameter.OnlineStatusScreenEnabled">OnlineStatusScreenEnabled</Name>
+          <Description name="local:Parameter.IOScannerActivity">enable/disable Online-Status Screen</Description>
+        </Parameter>
+        <!-- Add NIC (i.e. Network Interface Name) here whose communication settings may not be changed through CODESYS (Ethernet Editor) -->
+        <Parameter ParameterId="10000003" type="std:WSTRING">
+          <Attributes offlineaccess="read" download="false" functional="false" />
+          <Default>""</Default>
+          <Name name="local:Parameter.ReadOnlyNICName">ReadOnlyNIC</Name>
+          <Description name="local:Parameter.ReadOnlyNICsDesc">NIC whose communication settings shall not be changed.</Description>
+        </Parameter>
+        <Parameter ParameterId="10000004" type="std:BOOL">
+          <Attributes offlineaccess="none" download="true" functional="false" />
+          <Default>true</Default>
+          <Name name="local:Parameter.UseAsyncTask">UseAsyncTask</Name>
+          <Description name="local:Parameter.UseAsyncTask_Desc">Use async task to check the network connectivity. This relieves the bus cycle task.</Description>
+        </Parameter>
+        <Parameter ParameterId="20000000" type="std:__XWORD">
+          <Attributes offlineaccess="none" download="true" functional="false" />
+          <Default>0</Default>
+          <Name name="local:Dummy1">Dummy Parameter</Name>
+          <Description name="local:Dummy1">Dummy Parameter</Description>
+        </Parameter>
+        <Parameter ParameterId="805306369" type="std:BOOL">
+          <Attributes offlineaccess="none" download="false" />
+          <Default>true</Default>
+          <Name name="local:Parameter.ShowLoggerPage">ShowLoggerPage</Name>
+          <Description name="local:Parameter.ShowLoggerPageDesc">Show the logger page for the scanner</Description>
+        </Parameter>
+      </HostParameterSet>
+      <DriverInfo needsBusCycle="true">
+        <RequiredLib identifier="IoDrvEthernet" libname="IoDrvEthernet" placeholderlib="IoDrvEthernet" vendor="3S - Smart Software Solutions GmbH" version="*">
+          <FBInstance basename="$(DeviceName)" fbname="IoDrvEthernet" fbnamediag="IoDrvEthernetDiag">
+            <Initialize methodName="Initialize" />
+          </FBInstance>
+        </RequiredLib>
+      </DriverInfo>
+      <Appearance>
+        <ShowEditor>EthernetSystemConfigPage</ShowEditor>
+        <ShowEditor>ParameterEditor</ShowEditor>
+        <ShowEditor>IOMappingEditor</ShowEditor>
+        <ShowEditor>LoggerPage</ShowEditor>
+        <ShowEditor>StatusPage</ShowEditor>
+        <ShowEditor>DeviceInformation</ShowEditor>
+      </Appearance>
+    </Connector>
+    <ExtendedSettings>
+      <ts:TargetSettings>
+        <ts:section name="library-management">
+          <ts:section name="placeholder-libraries">
+            <!-- **********************************************  Ethernet Placeholder  ***************************************************** -->
+            <ts:setting name="IoDrvEthernet" type="string" access="visible">
+              <ts:value>IoDrvEthernet, 4.2.0.0 (3S - Smart Software Solutions GmbH)</ts:value>
+            </ts:setting>
+          </ts:section>
+        </ts:section>
+      </ts:TargetSettings>
+    </ExtendedSettings>
+    <CompatibleVersions>
+      <Version>3.5.*.*</Version>
+      <Version>4.*.*.*</Version>
+    </CompatibleVersions>
+  </Device>
+</DeviceDescription>

@@ -1,0 +1,39 @@
+{
+	"deviceName": "CODESYS_Control_Win_V3_x64",
+	"identification": {
+		"type": 4096,
+		"id": "0000 0004",
+		"version": "3.5.22.30"
+	},
+	"children": [
+		{
+			"deviceName": "Ethernet",
+			"identification": {
+				"type": 110,
+				"id": "0000 0002",
+				"version": "4.2.0.0"
+			},
+			"children": [
+				{
+					"deviceName": "Modbus_TCP_Client",
+					"identification": {
+						"type": 88,
+						"id": "0000 0003",
+						"version": "4.6.0.0"
+					},
+					"children": [
+						{
+							"deviceName": "Modbus_TCP_Server",
+							"identification": {
+								"type": 89,
+								"id": "0000 0005",
+								"version": "4.6.0.0"
+							},
+							"children": []
+						}
+					]
+				}
+			]
+		}
+	]
+}

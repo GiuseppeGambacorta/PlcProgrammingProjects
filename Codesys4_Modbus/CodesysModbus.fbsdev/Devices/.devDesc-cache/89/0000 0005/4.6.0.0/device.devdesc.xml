@@ -1,0 +1,687 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DeviceDescription xmlns="http://www.3s-software.com/schemas/DeviceDescription-1.0.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ts="http://www.3s-software.com/schemas/TargetSettings-0.1.xsd" xsi:schemaLocation="http://www.3s-software.com/schemas/DeviceDescription-1.0.xsd https://de.codesys.com/fileadmin/data/schemas/DeviceDescription-1.0.xsd http://www.3s-software.com/schemas/TargetSettings-0.1.xsd https://de.codesys.com/fileadmin/data/schemas/TargetSettings-0.1.xsd">
+  <Types namespace="localTypes">
+    <StructType name="CHANNEL">
+      <Component identifier="CycleTime" type="std:DWORD">
+        <Default />
+        <VisibleName name="local:CHANNEL.CycleTime">Cycle Time</VisibleName>
+      </Component>
+      <Component identifier="ReadOffset" type="std:UINT">
+        <Default />
+        <VisibleName name="local:CHANNEL.ReadOffset">Read Offset</VisibleName>
+      </Component>
+      <Component identifier="ReadLength" type="std:UINT">
+        <Default />
+        <VisibleName name="local:CHANNEL.ReadLength">Read Length</VisibleName>
+      </Component>
+      <Component identifier="WriteOffset" type="std:UINT">
+        <Default />
+        <VisibleName name="local:CHANNEL.WriteOffset">Write Offset</VisibleName>
+      </Component>
+      <Component identifier="WriteLength" type="std:UINT">
+        <Default />
+        <VisibleName name="local:CHANNEL.WriteLength">Write Length</VisibleName>
+      </Component>
+      <Component identifier="ChannelName" type="std:STRING">
+        <Default />
+        <VisibleName name="local:CHANNEL.ChannelName">Channel Name</VisibleName>
+      </Component>
+      <Component identifier="AccessType" type="std:STRING">
+        <Default />
+        <VisibleName name="local:CHANNEL.AccessType">Access Type</VisibleName>
+      </Component>
+      <Component identifier="Trigger" type="std:STRING">
+        <Default />
+        <VisibleName name="local:CHANNEL.Trigger">Trigger</VisibleName>
+      </Component>
+      <Component identifier="ChannelComment" type="std:STRING">
+        <Default />
+        <VisibleName name="local:CHANNEL.ChannelComment">Channel Comment</VisibleName>
+      </Component>
+      <Component identifier="ErrorHandling" type="std:STRING">
+        <Default />
+        <VisibleName name="local:CHANNEL.ErrorHandling">Error Handling</VisibleName>
+      </Component>
+    </StructType>
+    <StructType name="CHANNEL2">
+      <Component identifier="CycleTime" type="std:DWORD">
+        <Default />
+        <VisibleName name="local:CHANNEL.CycleTime">Cycle Time</VisibleName>
+      </Component>
+      <Component identifier="FunctionCode" type="std:UINT">
+        <Default />
+        <VisibleName name="local:CHANNEL.FunctionCode">Function Code</VisibleName>
+      </Component>
+      <Component identifier="ReadOffset" type="std:UINT">
+        <Default />
+        <VisibleName name="local:CHANNEL.ReadOffset">Read Offset</VisibleName>
+      </Component>
+      <Component identifier="ReadLength" type="std:UINT">
+        <Default />
+        <VisibleName name="local:CHANNEL.ReadLength">Read Length</VisibleName>
+      </Component>
+      <Component identifier="WriteOffset" type="std:UINT">
+        <Default />
+        <VisibleName name="local:CHANNEL.WriteOffset">Write Offset</VisibleName>
+      </Component>
+      <Component identifier="WriteLength" type="std:UINT">
+        <Default />
+        <VisibleName name="local:CHANNEL.WriteLength">Write Length</VisibleName>
+      </Component>
+      <Component identifier="ChannelName" type="std:STRING">
+        <Default />
+        <VisibleName name="local:CHANNEL.ChannelName">Channel Name</VisibleName>
+      </Component>
+      <Component identifier="AccessType" type="std:STRING">
+        <Default />
+        <VisibleName name="local:CHANNEL.AccessType">Access Type</VisibleName>
+      </Component>
+      <Component identifier="Trigger" type="std:STRING">
+        <Default />
+        <VisibleName name="local:CHANNEL.Trigger">Trigger</VisibleName>
+      </Component>
+      <Component identifier="ChannelComment" type="std:STRING">
+        <Default />
+        <VisibleName name="local:CHANNEL.ChannelComment">Channel Comment</VisibleName>
+      </Component>
+      <Component identifier="ErrorHandling" type="std:STRING">
+        <Default />
+        <VisibleName name="local:CHANNEL.ErrorHandling">Error Handling</VisibleName>
+      </Component>
+    </StructType>
+    <EnumType basetype="std:USINT" name="TriggerEnumType">
+      <Enum identifier="TRIGGER_APP">
+        <Value>0</Value>
+        <VisibleName name="local:TRIGGER_APP">APPLICATION</VisibleName>
+      </Enum>
+      <Enum identifier="TRIGGER_CYCLIC">
+        <Value>5</Value>
+        <VisibleName name="local:TRIGGER_CYCLIC">CYCLIC</VisibleName>
+      </Enum>
+      <Enum identifier="TRIGGER_RISING_EDGE">
+        <Value>6</Value>
+        <VisibleName name="local:TRIGGER_RISING_EDGE">RISING_EDGE</VisibleName>
+      </Enum>
+    </EnumType>
+    <EnumType basetype="std:BOOL" name="ErrorHandlingEnumType">
+      <Enum identifier="KeepLastValue">
+        <Value>true</Value>
+        <VisibleName name="local:KeepLastValue">Keep last value</VisibleName>
+      </Enum>
+      <Enum identifier="SetZero">
+        <Value>false</Value>
+        <VisibleName name="local:SetZero">Set to zero</VisibleName>
+      </Enum>
+    </EnumType>
+    <!-- New version of Channel-config data structure, saves about 300 bytes per channel !	-->
+    <StructType name="CHANNEL_PACKED">
+      <Component identifier="FunctionCode" type="std:UINT">
+        <Default />
+        <VisibleName name="local:CHANNEL.FunctionCode">Function Code</VisibleName>
+      </Component>
+      <Component identifier="ReadOffset" type="std:UINT">
+        <Default />
+        <VisibleName name="local:CHANNEL.ReadOffset">Read Offset</VisibleName>
+      </Component>
+      <Component identifier="ReadLength" type="std:UINT">
+        <Default />
+        <VisibleName name="local:CHANNEL.ReadLength">Read Length</VisibleName>
+      </Component>
+      <Component identifier="WriteOffset" type="std:UINT">
+        <Default />
+        <VisibleName name="local:CHANNEL.WriteOffset">Write Offset</VisibleName>
+      </Component>
+      <Component identifier="WriteLength" type="std:UINT">
+        <Default />
+        <VisibleName name="local:CHANNEL.WriteLength">Write Length</VisibleName>
+      </Component>
+      <Component identifier="Trigger" type="localTypes:TriggerEnumType">
+        <Default />
+        <VisibleName name="local:CHANNEL.Trigger">Trigger</VisibleName>
+      </Component>
+      <Component identifier="CycleTime" type="std:DWORD">
+        <Default />
+        <VisibleName name="local:CHANNEL.CycleTime">Cycle Time</VisibleName>
+      </Component>
+      <Component identifier="ErrorHandling" type="localTypes:ErrorHandlingEnumType">
+        <Default />
+        <VisibleName name="local:CHANNEL.ErrorHandling">Error Handling</VisibleName>
+      </Component>
+      <Component identifier="EnableRegisterBitMapping" type="std:BOOL">
+        <Default />
+        <VisibleName name="local:CHANNEL.EnableRegisterBitMapping">EnableRegisterBitMapping</VisibleName>
+      </Component>
+      <!--
+      <Component identifier="AccessType" type="std:USINT">			   Notwendig !?! 
+        <Default />
+        <VisibleName name="local:CHANNEL.AccessType">Access Type</VisibleName>
+      </Component>
+	  -->
+    </StructType>
+    <!-- New version of Channel-Init data structure -->
+    <StructType name="CHANNEL_INIT">
+      <Component identifier="FunctionCode" type="std:UINT">
+        <Default />
+        <VisibleName name="local:CHANNEL.FunctionCode">Function Code</VisibleName>
+      </Component>
+      <Component identifier="WriteOffset" type="std:UINT">
+        <Default />
+        <VisibleName name="local:CHANNEL.WriteOffset">Write Offset</VisibleName>
+      </Component>
+      <Component identifier="WriteLength" type="std:UINT">
+        <Default />
+        <VisibleName name="local:CHANNEL.WriteLength">Write Length</VisibleName>
+      </Component>
+      <Component identifier="InitValue" type="std:UINT">
+        <Default />
+        <VisibleName name="local:CHANNEL.InitValue">Init Value</VisibleName>
+      </Component>
+    </StructType>
+    <BitfieldType basetype="std:WORD" name="REGISTERBITS">
+      <Component identifier="Bit0" type="std:BOOL">
+        <Default>FALSE</Default>
+        <VisibleName name="local:Dummy">Bit 0</VisibleName>
+      </Component>
+      <Component identifier="Bit1" type="std:BOOL">
+        <Default>FALSE</Default>
+        <VisibleName name="local:Dummy">Bit 1</VisibleName>
+      </Component>
+      <Component identifier="Bit2" type="std:BOOL">
+        <Default>FALSE</Default>
+        <VisibleName name="local:Dummy">Bit 2</VisibleName>
+      </Component>
+      <Component identifier="Bit3" type="std:BOOL">
+        <Default>FALSE</Default>
+        <VisibleName name="local:Dummy">Bit 3</VisibleName>
+      </Component>
+      <Component identifier="Bit4" type="std:BOOL">
+        <Default>FALSE</Default>
+        <VisibleName name="local:Dummy">Bit 4</VisibleName>
+      </Component>
+      <Component identifier="Bit5" type="std:BOOL">
+        <Default>FALSE</Default>
+        <VisibleName name="local:Dummy">Bit 5</VisibleName>
+      </Component>
+      <Component identifier="Bit6" type="std:BOOL">
+        <Default>FALSE</Default>
+        <VisibleName name="local:Dummy">Bit 6</VisibleName>
+      </Component>
+      <Component identifier="Bit7" type="std:BOOL">
+        <Default>FALSE</Default>
+        <VisibleName name="local:Dummy">Bit 7</VisibleName>
+      </Component>
+      <Component identifier="Bit8" type="std:BOOL">
+        <Default>FALSE</Default>
+        <VisibleName name="local:Dummy">Bit 8</VisibleName>
+      </Component>
+      <Component identifier="Bit9" type="std:BOOL">
+        <Default>FALSE</Default>
+        <VisibleName name="local:Dummy">Bit 9</VisibleName>
+      </Component>
+      <Component identifier="Bit10" type="std:BOOL">
+        <Default>FALSE</Default>
+        <VisibleName name="local:Dummy">Bit 10</VisibleName>
+      </Component>
+      <Component identifier="Bit11" type="std:BOOL">
+        <Default>FALSE</Default>
+        <VisibleName name="local:Dummy">Bit 11</VisibleName>
+      </Component>
+      <Component identifier="Bit12" type="std:BOOL">
+        <Default>FALSE</Default>
+        <VisibleName name="local:Dummy">Bit 12</VisibleName>
+      </Component>
+      <Component identifier="Bit13" type="std:BOOL">
+        <Default>FALSE</Default>
+        <VisibleName name="local:Dummy">Bit 13</VisibleName>
+      </Component>
+      <Component identifier="Bit14" type="std:BOOL">
+        <Default>FALSE</Default>
+        <VisibleName name="local:Dummy">Bit 14</VisibleName>
+      </Component>
+      <Component identifier="Bit15" type="std:BOOL">
+        <Default>FALSE</Default>
+        <VisibleName name="local:Dummy">Bit 15</VisibleName>
+      </Component>
+    </BitfieldType>
+    <EnumType basetype="std:UINT" name="ComState">
+      <Enum identifier="OFF">
+        <Value>0</Value>
+        <VisibleName name="local:OFF">OFF</VisibleName>
+        <Description name="local:OFFDesc">Not active</Description>
+      </Enum>
+      <Enum identifier="CONNECTING">
+        <Value>1</Value>
+        <VisibleName name="local:CONNECTING">CONNECTING</VisibleName>
+        <Description name="local:CONNECTINGDesc">TCP connect request is currently running</Description>
+      </Enum>
+      <Enum identifier="CONNECTED">
+        <Value>2</Value>
+        <VisibleName name="local:Open">CONNECTED</VisibleName>
+        <Description name="local:OpenDesc">TCP connection is established</Description>
+      </Enum>
+      <Enum identifier="DISCONNECTING">
+        <Value>3</Value>
+        <VisibleName name="local:DISCONNECTING">DISCONNECTING</VisibleName>
+        <Description name="local:DISCONNECTINGDesc">TCP connection is aborted (by application)</Description>
+      </Enum>
+      <Enum identifier="SOCKET_ERROR">
+        <Value>4</Value>
+        <VisibleName name="local:SOCKET_ERROR">SOCKET_ERROR</VisibleName>
+        <Description name="local:SOCKET_ERRORDesc">TCP socket error occured, e.g. if read/write failed due to a disconnected cable etc.</Description>
+      </Enum>
+    </EnumType>
+    <!--
+			- ComStatus
+			- Request Counter
+			- Error Counter
+			- Last Error:
+			  - Timestamp
+			  - ChannelIndex (oder -1)    FC?
+			  - ErrorCode (auch TCP_CONNECTION...)			  
+		-->
+    <StructType name="ServerDiagT">
+      <Component identifier="StructVersion" type="std:UDINT" offlineaccess="none">
+        <Default>1</Default>
+        <VisibleName name="local:StructVersion">Diag Version</VisibleName>
+      </Component>
+      <Component identifier="ComState" type="localTypes:ComState">
+        <Default />
+        <VisibleName name="local:ComState">ComState</VisibleName>
+        <Description name="local:Online.Desc">Current State of TCP Connection</Description>
+      </Component>
+      <Component identifier="align" type="std:UINT" offlineaccess="none">
+        <Default />
+        <VisibleName name="local:align">align</VisibleName>
+      </Component>
+      <Component identifier="RequestCounter" type="std:UDINT">
+        <Default />
+        <VisibleName name="local:RequestCounter">Request Counter</VisibleName>
+      </Component>
+      <Component identifier="ErrorCounter" type="std:UDINT">
+        <Default />
+        <VisibleName name="local:ErrorCounter">Error Counter</VisibleName>
+      </Component>
+      <Component identifier="LastError" type="localTypes:LastErrorT">
+        <Default />
+        <VisibleName name="local:LastError">Last Error</VisibleName>
+      </Component>
+    </StructType>
+    <StructType name="LastErrorT">
+      <Component identifier="Timestamp" type="std:DATE_AND_TIME">
+        <Default>
+        </Default>
+        <VisibleName name="local:Timestamp">Timestamp</VisibleName>
+      </Component>
+      <Component identifier="ChannelIndex" type="std:INT">
+        <Default>-1</Default>
+        <VisibleName name="local:ChannelIndex">Channel Index</VisibleName>
+      </Component>
+      <Component identifier="ErrorCode" type="localTypes:MBErrorCode">
+        <Default>16#FF</Default>
+        <VisibleName name="local:ErrorCounter">Error Code</VisibleName>
+      </Component>
+    </StructType>
+    <EnumType basetype="std:UINT" name="MBErrorCode">
+      <Enum identifier="RESPONSE_SUCCESS">
+        <Value>0</Value>
+        <VisibleName name="local:RESPONSE_SUCCESS">RESPONSE SUCCESS</VisibleName>
+        <Description name="local:RESPONSE_SUCCESSDesc">Request excecuted successfully</Description>
+      </Enum>
+      <Enum identifier="ILLEGAL_FUNCTION">
+        <Value>1</Value>
+        <VisibleName name="local:ILLEGAL_FUNCTION">ILLEGAL FUNCTION</VisibleName>
+        <Description name="local:ILLEGAL_FUNCTIONDesc">Server does not support the function code</Description>
+      </Enum>
+      <Enum identifier="ILLEGAL_DATA_ADDRESS">
+        <Value>2</Value>
+        <VisibleName name="local:ILLEGAL_DATA_ADDRESS">ILLEGAL DATA ADDRESS</VisibleName>
+        <Description name="local:ILLEGAL_DATA_ADDRESSDesc">Server does not support this register offset</Description>
+      </Enum>
+      <Enum identifier="ILLEGAL_DATA_VALUE">
+        <Value>3</Value>
+        <VisibleName name="local:ILLEGAL_DATA_VALUE">ILLEGAL DATA VALUE</VisibleName>
+        <Description name="local:ILLEGAL_DATA_VALUEDesc">The value to be written is not valid</Description>
+      </Enum>
+      <Enum identifier="SERVER_DEVICE_FAILURE">
+        <Value>4</Value>
+        <VisibleName name="local:SERVER_DEVICE_FAILURE">SERVER DEVICE FAILURE</VisibleName>
+        <Description name="local:SERVER_DEVICE_FAILUREDesc">Unrecoverable error while performing the request</Description>
+      </Enum>
+      <Enum identifier="ACKNOWLEDGE">
+        <Value>5</Value>
+        <VisibleName name="local:ACKNOWLEDGE">ACKNOWLEDGE</VisibleName>
+        <Description name="local:ACKNOWLEDGEDesc">
+        </Description>
+      </Enum>
+      <Enum identifier="SERVER_DEVICE_BUSY">
+        <Value>6</Value>
+        <VisibleName name="local:SERVER_DEVICE_BUSY">SERVER DEVICE BUSY</VisibleName>
+        <Description name="local:SERVER_DEVICE_BUSYDesc">Notification of a Server that a lengthy operation is in progress</Description>
+      </Enum>
+      <Enum identifier="MEMORY_PARITY_ERROR">
+        <Value>8</Value>
+        <VisibleName name="local:MEMORY_PARITY_ERROR">MEMORY PARITY ERROR</VisibleName>
+        <Description name="local:MEMORY_PARITY_ERRORDesc">Special error for function code 20, 21</Description>
+      </Enum>
+      <Enum identifier="GATEWAY_PATH_UNAVAILABLE">
+        <Value>16#0A</Value>
+        <VisibleName name="local:GATEWAY_PATH_UNAVAILABLE">GATEWAY PATH UNAVAILABLE</VisibleName>
+        <Description name="local:GATEWAY_PATH_UNAVAILABLEDesc">Special error when using devices behind a gateway (Gateway misconfigured/busy)</Description>
+      </Enum>
+      <Enum identifier="GATEWAY_TARGET_FAILED_TO_RESPOND">
+        <Value>16#0B</Value>
+        <VisibleName name="local:GATEWAY_TARGET_FAILED_TO_RESPOND">GATEWAY TARGET FAILED TO RESPOND</VisibleName>
+        <Description name="local:GATEWAY_TARGET_FAILED_TO_RESPONDDesc">Special error when using devices behind a gateway (Device does not respond)</Description>
+      </Enum>
+      <Enum identifier="RESPONSE_TIMEOUT">
+        <Value>16#A1</Value>
+        <VisibleName name="local:RESPONSE_TIMEOUT">RESPONSE TIMEOUT</VisibleName>
+        <Description name="local:RESPONSE_TIMEOUTDesc">There was no response in time</Description>
+      </Enum>
+      <Enum identifier="RESPONSE_CRC_FAIL">
+        <Value>16#A2</Value>
+        <VisibleName name="local:RESPONSE_CRC_FAIL">RESPONSE CRC FAIL</VisibleName>
+        <Description name="local:RESPONSE_CRC_FAILDesc">The checksum of the response is not correct</Description>
+      </Enum>
+      <Enum identifier="SERVER">
+        <Value>16#A3</Value>
+        <VisibleName name="local:RESPONSE_WRONG_SERVER">RESPONSE WRONG Server</VisibleName>
+        <Description name="local:RESPONSE_WRONG_SERVERDesc">The response is not from the expected Server</Description>
+      </Enum>
+      <Enum identifier="RESPONSE_WRONG_FUNCTIONCODE">
+        <Value>16#A4</Value>
+        <VisibleName name="local:RESPONSE_WRONG_FUNCTIONCODE">RESPONSE WRONG FUNCTIONCODE</VisibleName>
+        <Description name="local:RESPONSE_WRONG_FUNCTIONCODEDesc">The response is not the expected function code</Description>
+      </Enum>
+      <Enum identifier="TCP_COMMUNICATION_ERROR">
+        <Value>16#A5</Value>
+        <VisibleName name="local:TCP_COMMUNICATION_ERROR">TCP COMMUNICATION ERROR</VisibleName>
+        <Description name="local:TCP_COMMUNICATION_ERRORDesc">TCP Port error. Request was not sent</Description>
+      </Enum>
+      <Enum identifier="RESPONSE_INVALID_DATA">
+        <Value>16#A6</Value>
+        <VisibleName name="local:RESPONSE_INVALID_DATA">RESPONSE INVALID DATA</VisibleName>
+        <Description name="local:RESPONSE_INVALID_DATADesc">*The response contains invalid data</Description>
+      </Enum>
+      <Enum identifier="RESPONSE_INVALID_PROTOCOL">
+        <Value>16#A7</Value>
+        <VisibleName name="local:RESPONSE_INVALID_PROTOCOL">RESPONSE INVALID PROTOCOL</VisibleName>
+        <Description name="local:RESPONSE_INVALID_PROTOCOLDesc">The response is not modbus protocol</Description>
+      </Enum>
+      <Enum identifier="RESPONSE_INVALID_HEADER">
+        <Value>16#A8</Value>
+        <VisibleName name="local:RESPONSE_INVALID_HEADER">RESPONSE INVALID HEADER</VisibleName>
+        <Description name="local:RESPONSE_INVALID_HEADERDesc">Any field of Modbus MBAP (Protocoll, Length) header is  invalid</Description>
+      </Enum>
+      <Enum identifier="UNDEFINED">
+        <Value>16#FF</Value>
+        <VisibleName name="local:UNDEFINED">UNDEFINED</VisibleName>
+        <Description name="local:UNDEFINEDDesc">The request's result is undefined or not yet known, e.g. initial state</Description>
+      </Enum>
+    </EnumType>
+  </Types>
+  <Strings namespace="local">
+    <Language lang="de-de">
+      <String identifier="typename">Modbus TCP Server</String>
+      <String identifier="typedescription">Ein Geraet, das als Server für einen Modbus TCP Client konfiguriert ist.</String>
+      <String identifier="_3S">CODESYS</String>
+    </Language>
+  </Strings>
+  <Strings namespace="preset">
+    <Language lang="de-de">
+      <String identifier="presetDesc5">Übersetzter Preset</String>
+    </Language>
+    <Language lang="en-en">
+      <String identifier="presetDesc5">Translated Preset</String>
+    </Language>
+  </Strings>
+  <Device>
+    <DeviceIdentification>
+      <Type>89</Type>
+      <Id>0000 0005</Id>
+      <Version>4.6.0.0</Version>
+    </DeviceIdentification>
+    <DeviceInfo>
+      <Name name="local:typename">Modbus TCP Server</Name>
+      <Description name="local:typedescription">A generic Modbus device that is configured as Server for a Modbus TCP Client.</Description>
+      <Vendor name="local:_3S">CODESYS</Vendor>
+      <OrderNumber>-</OrderNumber>
+    </DeviceInfo>
+    <Connector connectorId="1" explicit="false" hostpath="-1" interface="Common.ModbusTCPMaster" moduleType="89" role="child">
+      <InterfaceName name="local:ModbusSerialClient">ModbusTCPServer</InterfaceName>
+      <Slot allowEmpty="false" count="1" />
+      <!--
+		To make configuration for the end user easier, a Server's available registers may be defined as a "Preset". 
+		These presets will be displayed in a dropdown box when adding Channels to a Server via the Modbus Configurator.
+		
+		Format:
+		Valid XML-element named <ModbusPresets> beneath the devdesc-element <Custom>.
+		
+		The presets are grouped by the addressed Modbus memory area:
+		<CoilPresets>
+		<DiscreteInputPresets>
+		<InputRegisterPresets>
+		<HoldingRegisterPresets>
+		
+		Below each of these memeory area elements, a list of <Preset> elements is defined:
+		<CoilPresets>
+            <Preset offset="3">text zu 3</Preset>
+            <Preset offset="5" langRef="local:presetDesc5">default text for offsrt 5</Preset>		
+		</CoilPresets>
+		Each preset elements must have an offset attribute, it's content is the default text that is displayed in the Combo-box.
+		It can optionally have a langRef attribute for i18n purpose
+		
+		Optionally a prefix including the offset Nr can be displayed:
+		Example prefixFormat = {0:X4}  (four hex. numbers)
+			<Preset offset="5">Offset 5</Preset>             -> 0004 Offset 5
+            <Preset offset="1000">One Thousand</Preset>		 -> 03DE One Thousand	
+		Example prefixFormat = {0:D4}:  (four decimal numbers, followed by an ':')
+			<Preset offset="5">Offset 5</Preset>             -> 0004: Offset 5
+            <Preset offset="1000">One Thousand</Preset>		 -> 1000: One Thousand				
+		-->
+      <!--<Custom>
+        <ModbusPresets showNumericPrefix="false" prefixFormat="{0:D4}:" xmlns="">
+          <CoilPresets>
+            <Preset offset="1">Default</Preset>
+            <Preset offset="5">Coil Offset 5</Preset>
+            <Preset offset="1000">One Thousand</Preset>
+          </CoilPresets>
+          <DiscreteInputPresets>
+            <Preset offset="1">Default</Preset>
+            <Preset offset="1000">qwert</Preset>
+          </DiscreteInputPresets>          
+          <InputRegisterPresets>
+            <Preset offset="3">text zu 3</Preset>
+            <Preset offset="5" langRef="preset:presetDesc5">Default Text in en-en</Preset>
+          </InputRegisterPresets> 
+          <HoldingRegisterPresets>
+            <Preset offset="1">Default</Preset>
+            <Preset offset="5" langRef="preset:presetDesc5">Default Text in en-en</Preset>
+			<Preset offset="1000">One Thousand</Preset>
+          </HoldingRegisterPresets> 		   
+        </ModbusPresets>
+      </Custom>	  -->
+      <!--
+      <Appearance>
+        <ShowEditor>ModbusTCPMasterSlavePage</ShowEditor>
+
+        <ShowEditor>ModbusSlaveChannelPage</ShowEditor>
+        <ShowEditor>ModbusSlaveInitPage</ShowEditor>
+
+        <ShowEditor>IOMappingEditor</ShowEditor>
+        <ShowEditor>StatusPage</ShowEditor>
+        <ShowEditor>DeviceInformation</ShowEditor>
+      </Appearance>
+-->
+      <HostParameterSet>
+        <!-- find better ID ! -->
+        <Parameter ParameterId="8000" type="std:BOOL">
+          <Attributes offlineaccess="read" download="false" functional="false" />
+          <Default>true</Default>
+          <!-- oder false ? -->
+          <Name name="local:Parameter.NewChannelConfig">NewChannelConfig</Name>
+          <Description name="local:Parameter.NewChannelConfig">Use the new Channel-Config format</Description>
+        </Parameter>
+        <!-- Update Config ? only performed if true 
+        <Parameter ParameterId="8001" type="std:BOOL">	
+			<Attributes offlineaccess="read" download="false" functional="false"/>
+			<Default>false</Default>
+			<Name name="local:Parameter.UpdatedChannelConfig">UpdatedChannelConfig</Name>
+			<Description name="local:Parameter.UpatedChannelConfig">Updated to the new Channel-Config format</Description>
+		</Parameter>
+		-->
+        <Parameter ParameterId="9100" type="std:USINT">
+          <Attributes offlineaccess="readwrite" download="true" functional="false" />
+          <Default>16#FF</Default>
+          <Name name="local:Parameter.ServerAddr">Unit-ID</Name>
+          <Description name="local:Parameter.ServerAddr">Unit-ID of the Device</Description>
+        </Parameter>
+        <Parameter ParameterId="9101" type="std:DWORD">
+          <Attributes offlineaccess="readwrite" download="true" functional="false" />
+          <Default>1000</Default>
+          <Name name="local:Parameter.ResponseTimeout">ResponseTimeout</Name>
+          <Description name="local:Parameter.ResponseTimeout">Maximum time for a Server to respond in ms</Description>
+        </Parameter>
+        <Parameter ParameterId="9102" type="std:ARRAY[0..3] OF BYTE">
+          <Attributes offlineaccess="readwrite" download="true" functional="false" />
+          <Default>[192, 168, 0, 1]</Default>
+          <Name name="local:Parameter.IPAddress">IPAddress</Name>
+          <Description name="local:Parameter.IPAddress">Configure IP Address of TCP Server.</Description>
+        </Parameter>
+        <!-- remove this parameter from description, if fixed port = 502 is required ! -->
+        <Parameter ParameterId="9103" type="std:UINT">
+          <Attributes offlineaccess="readwrite" download="true" functional="false" />
+          <Default>502</Default>
+          <Name name="local:Parameter.Port">Port</Name>
+          <Description name="local:Parameter.Port">Port where the Server is listening</Description>
+        </Parameter>
+        <!-- enable the parameters 9105 + 9106 if fallback IP address is required ! -->
+        <!--<Parameter ParameterId="9105" type="std:BOOL">
+			<Attributes offlineaccess="readwrite" download="true"/>
+			<Default>false</Default>			<!{1}** oder false ? **{1}>
+			<Name name="local:Parameter.FallbackIP">fallback IP</Name>
+			<Description name="local:Parameter.FallbackIP.Desc">Enable fallback IP</Description>
+		</Parameter>
+		<Parameter ParameterId="9106" type="std:ARRAY[0..3] OF BYTE">
+          <Attributes offlineaccess="readwrite" download="true"/>
+          <Default>[0, 0, 0, 0]</Default>
+          <Name name="local:Parameter.SecondIPAddress">SecondIPAddress</Name>
+          <Description name="local:Parameter.SecondIPAddress.Desc">Configure second IP Address of TCP SLave.</Description>
+        </Parameter>-->
+        <!-- also enable the parameter 9107 if the preferred line should be selectable ! -->
+        <!--
+		<Parameter ParameterId="9107" type="std:UINT">
+          <Attributes offlineaccess="readwrite" download="true"/>
+          <Default>0</Default>
+          <Name name="local:Parameter.PreferredLine">PreferredLine</Name>
+          <Description name="local:Parameter.PreferredLine.Desc">Configure Preferred Line.</Description>
+        </Parameter>
+		-->
+        <!-- also enable the parameter 9108 if the inactive line should be configurable to not always stay connected ! -->
+        <!--
+		<Parameter ParameterId="9108" type="std:BOOL">
+			<Attributes offlineaccess="readwrite" download="true"/>
+			<Default>true</Default>
+			<Name name="local:Parameter.KeepLinesEnabled">KeepLinesEnabled</Name>
+			<Description name="local:Parameter.KeepLinesEnabled.Desc">Connect both lines at all times</Description>
+		</Parameter>
+		-->
+        <Parameter ParameterId="9200" type="localTypes:ServerDiagT">
+          <Attributes channel="diag" download="true" functional="false" offlineaccess="read" onlineaccess="read" />
+          <Name name="local:ServerDiag">Server Diag</Name>
+          <Description name="local:ServerDiag.Desc">Server's diagnostic information</Description>
+        </Parameter>
+        <Parameter ParameterId="9201" type="std:BOOL">
+          <Attributes offlineaccess="none" onlineaccess="none" download="true" functional="false" channel="diagAck" />
+          <Default>FALSE</Default>
+          <Name name="local:DiagAck">Confirm Diagnosis</Name>
+          <!--Description name="localStrings:DiagAck">Reset Statistics</Description-->
+        </Parameter>
+        <Parameter ParameterId="1879052288" type="std:UDINT">
+          <Attributes offlineaccess="read" onlineaccess="read" download="true" functional="false" />
+          <Default>16#03050B00</Default>
+          <Name name="local:Parameter.ConfigVersion">ConfigVersion</Name>
+        </Parameter>
+      </HostParameterSet>
+      <DriverInfo needsBusCycle="false">
+        <RequiredLib identifier="IoDrvModbusTCP" libname="IoDrvModbusTCP" vendor="CODESYS" version="*" placeholderlib="IoDrvModbusTCP">
+          <FBInstance basename="$(DeviceName)" fbname="ModbusTCPSlave" fbnamediag="ModbusTCPSlave_Diag">
+            <Initialize methodName="Initialize" />
+          </FBInstance>
+        </RequiredLib>
+        <Scan supported="false" />
+      </DriverInfo>
+    </Connector>
+    <Connector connectorId="2" explicit="false" hostpath="1" interface="Common.ModbusSerialGateway" moduleType="95" role="parent">
+      <!--  moduleType=0x5F -->
+      <InterfaceName name="local:NONE">ModbusGenericSerialClient</InterfaceName>
+      <Var max="32" />
+      <AdditionalInterface interface="Common.ModbusGenericSerialMaster" />
+    </Connector>
+    <ExtendedSettings>
+      <ts:TargetSettings>
+        <ts:section name="deviceconfiguration">
+          <ts:setting name="createBitChannels" type="boolean" access="visible">
+            <ts:value>1</ts:value>
+          </ts:setting>
+        </ts:section>
+      </ts:TargetSettings>
+    </ExtendedSettings>
+    <!--  	
+    <DeviceParameterSet>
+	DEPRECATED : OLD DEFINITION OF PRESETS
+	(changed with V 3.4, downward compatibility)
+	
+	Device Parameter Presets: To make configuration for the end user easier, a Server's available registers may be defined as a "Preset". 
+	These presets will be displayed in a dropdown box when adding Channels to a Server via the Modbus Configurator.
+	
+	Format:
+
+	"ParameterId" has to be unique and consecutively numbered starting at "8100".
+	"onlineaccess" specifies, wether the preset uses a 'read' or "write" function. 
+
+	"Default" starts with a MODBUS_REGISTER_NUMBER (optionally followed by a SPACE and textual description). 
+	The MODBUS_REGISTER_NUMBER may be entered in decimal or hex format in the range from 0 to 65535.
+
+	Example for valid "Default" strings:
+		<Default>'0xabcd Motor Speed'</Default>	
+		<Default>'1234 Motor Speed'</Default>	
+		<Default>'0XABCD'</Default>
+
+
+	"Description" is used for storing the Modbus function code as defined in the official Modbus Specification. 
+	Use one of the following decimal numbers (optionally followed by a SPACE and textual description):
+                1 = Read Coils
+  		2 = Read Discrete Inputs 
+                3 = Read Holding Registers
+                4 = Read Input Registers 
+                5 = Write Single Coil 
+                6 = Write Single Register 
+                15 = Write Multiple Coils 
+                16 = Write Multiple Registers  
+
+	Example for valid "Description" strings:	
+	 	<Description name="local:Parameter.FunctionCode">6</Description>
+	 	<Description name="local:Parameter.FunctionCode">6 = Write Single Register</Description>
+
+      // START OF PRESETS:
+      <Parameter ParameterId="8100" type="std:STRING">
+        <Attributes onlineaccess="read" download="true" functional="false"/>
+        <Default>'0x0001 Default'</Default>
+        <Name name="local:Parameter.Preset">Preset</Name>
+        <Description name="local:Parameter.FunctionCode">3 = Read Holding Registers</Description>
+      </Parameter>
+      <Parameter ParameterId="8101" type="std:STRING">
+        <Attributes onlineaccess="write" download="true" functional="false"/>
+        <Default>'0x0001 Default'</Default>
+        <Name name="local:Parameter.Preset">Preset</Name>
+        <Description name="local:Parameter.FunctionCode">16 = Write Multiple Registers</Description>
+      </Parameter>
+    </DeviceParameterSet>
+	 -->
+    <CompatibleVersions>
+      <Version>3.5.*.*</Version>
+      <Version>4.*.*.*</Version>
+    </CompatibleVersions>
+  </Device>
+</DeviceDescription>
